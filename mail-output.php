@@ -76,7 +76,7 @@
                 color:#202020 !important;
                 display:block;
                 font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
-                font-size:20px;
+                font-size:28px;
                 font-style:normal;
                 font-weight:bold;
                 line-height:120%;
@@ -92,12 +92,12 @@
                 color:#404040 !important;
                 display:block;
                 font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
-                font-size:20px;
+                font-size:24px;
                 font-style:normal;
                 font-weight:bold;
                 line-height:100%;
                 letter-spacing:normal;
-                margin-top:10px;
+                margin-top:0px;
                 margin-right:0px;
                 margin-bottom:10px;
                 margin-left:0px;
@@ -249,6 +249,10 @@
                 text-align:left;
             }
             
+            .synopsis{
+                margin-bottom: 10px;
+            }
+            
             .rightColumnContent{
                 color:#505050;
                 font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -337,14 +341,14 @@
             }	@media only screen and (max-width: 480px){
 
                 h1{
-                    font-size:22px !important;
+                    font-size:24px !important;
                     line-height:100% !important;
                 }
 
             }	@media only screen and (max-width: 480px){
 
                 h2{
-                    font-size:20px !important;
+                    font-size:22px !important;
                     line-height:100% !important;
                 }
 
@@ -474,7 +478,7 @@
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templatePreheader">
                                         <tr>
                                             <td valign="top" class="preheaderContent" style="padding-top:10px; padding-right:20px; padding-bottom:10px; padding-left:20px;">
-                                                <div data-id='PRE-HEADER'></div>
+                                                <div id="pre-header"></div>
                                             </td>
                                         </tr>
                                     </table>
@@ -493,14 +497,14 @@
                                                             <table border="0" cellpadding="0" cellspacing="0">
                                                                 <tr>
                                                                     <td class="headerContent">
-                                                                        <a href="http://www.BRANDDOMAIN">
+                                                                        <a href="http://www.DOMAIN">
                                                                             <img src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-header.gif" style="display:block; max-width:600px;" class="headerImage" alt="BRAND" /></a>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="intro">
                                                                         Hi {{lead.First Name}},<br>
-                                                                        <div data-id="INTRO-TEXT"></div>
+                                                                        <div id="intro-text"></div>
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -514,10 +518,11 @@
                             </tr>
                             <tr>
                                 <td style="background-color:#1a1a1a; color:#fff; font-family:Helvetica, Arial, sans-serif; font-size:18px; padding-left:20px; padding-top:10px; padding-bottom:10px; text-align:left;">
-                                    <div data-id="TITLE-TEXT"></div>
+                                    <div id="title-text"></div>
                                 </td>
                             </tr>
-                            <tr class="show-box box-1"><td align="center" valign="top">                                               <!-- BEGIN COLUMNS // -->
+                            <tr class="show-box box-1"><td align="center" valign="top">
+                                <!-- BEGIN COLUMNS // -->
                                 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateColumns">
                                     <tr>
                                         <td>
@@ -527,8 +532,8 @@
                                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                             <tr>
                                                                 <td align="center" class="leftColumnContent">
-                                                                    <a class="PRODUCT-URL-1" href="http://www.BRANDDOMAIN/Search/Results?term=PRODUCT-TITLE-1">
-                                                                        <img id="IMAGE-URL-1" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/product-01-STORE-DATE.jpg" style="display:block; max-width:280px;" width="280" class="columnImage" alt="PRODUCT-TITLE-1" />
+                                                                    <a id="product-url-1" href="http://www.DOMAIN">
+                                                                        <img id="image-url-1" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/hmv-no-packshot.gif" style="display:block; max-width:280px;" width="240" class="columnImage" alt="product-title-1" />
                                                                     </a>
                                                                 </td>
                                                             </tr>
@@ -538,29 +543,27 @@
                                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                             <tr>
                                                                 <td align="center" class="rightColumnContent" style="padding-left:20px;padding-right:20px;">
-                                                                    <h1>
-                                                                        <div data-id="PRODUCT-TITLE-1"></div>
-                                                                    </h1>
-                                                                    <div data-id="PRODUCT-SYNOPSIS-1"></div>
+                                                                    <h1><div id="product-title-1">Product Title</div></h1>
+                                                                    <div id="product-synopsis-1" class="synopsis">Product Synopsis</div>
                                                                     <table>
                                                                         <tr>
                                                                             <td>
-                                                                                <h2><span data-id="PRODUCT-PRICE-1-1"></span><span style="font-size:14px" data-id="FORMAT-1-1"></span></h2>
+                                                                                <h2><span id="product-price-1-1"></span><span style="font-size:14px" id="format-1-1"></span></h2>
                                                                             </td>
                                                                         </tr>
                                                                         <tr>
                                                                             <td>
-                                                                                <h2><span data-id="PRODUCT-PRICE-1-2"></span><span style="font-size:14px" data-id="FORMAT-1-2"></span></h2>
+                                                                                <h2><span id="product-price-1-2"></span><span style="font-size:14px" id="format-1-2"></span></h2>
                                                                             </td>
                                                                         </tr>
                                                                         <tr>
                                                                             <td>
-                                                                                <h2><span data-id="PRODUCT-PRICE-1-3"></span><span style="font-size:14px" data-id="FORMAT-1-3"></span></h2>
+                                                                                <h2><span id="product-price-1-3"></span><span style="font-size:14px" id="format-1-3"></span></h2>
                                                                             </td>
                                                                         </tr>
                                                                     </table>
-                                                                    <a class="PRODUCT-URL-1" href="http://www.BRANDDOMAIN/Search/Results?term=PRODUCT-TITLE-1">
-                                                                        <img data-id="PRE-ORDER-1" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-buy-now.gif" style="display:block;" class="buybutton" alt="Buy PRODUCT-TITLE-1 Now" />
+                                                                    <a id="product-url-1" href="http://www.DOMAIN">
+                                                                        <img id="pre-order-1" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-buy-now.gif" style="display:block;" class="buybutton" alt="Buy Now" />
                                                                     </a>
                                                                 </td>
                                                             </tr>
@@ -614,28 +617,28 @@
                                                             <table border="0" cellpadding="0" cellspacing="0" width="100%" class="show-box box-<?php echo $count?>" <?php if ($count > 3) { echo 'style="display:none"'; }?>>
                                                                 <tr>
                                                                     <td align="center" class="<?php echo $class?>">
-                                                                        <a class="PRODUCT-URL-<?php echo $count?>" href="http://www.BRANDDOMAIN/Search/Results?term=PRODUCT-TITLE-<?php echo $count?>">
-                                                                            <img id="IMAGE-URL-<?php echo $count?>" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/product-02-STORE-DATE.jpg" style="display:block; max-width:280px;" width="280" class="columnImage" alt="PRODUCT-TITLE-<?php echo $count?>" /></a>
+                                                                        <a id="product-url-<?php echo $count?>" href="http://www.DOMAIN">
+                                                                            <img id="image-url-<?php echo $count?>" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/hmv-no-packshot.gif" style="display:block; max-width:280px;" width="200" class="columnImage" alt="product-title-<?php echo $count?>" /></a>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td align="center" class="<?php echo $class?>" style="padding-left:20px;">
-                                                                       <h1><div data-id="PRODUCT-TITLE-<?php echo $count?>"></div></h1>
-                                                                            <div data-id="PRODUCT-SYNOPSIS-<?php echo $count?>"></div>
+                                                                       <h1><div id="product-title-<?php echo $count?>"></div></h1>
+                                                                        <div id="product-synopsis-<?php echo $count?>" class="synopsis"></div>
                                                                             <table>
                                                                                 <?php while($second_count <= 2) {
                                                                                      $second_count++; ?>
                                                                                      <tr>
                                                                                          <td>
-                                                                                            <h2><span data-id="PRODUCT-PRICE-<?php echo $count?>-<?php echo $second_count?>"></span><span style="font-size:14px" data-id="FORMAT-<?php echo $count?>-<?php echo $second_count?>"></span></h2>
+                                                                                            <h2><span id="product-price-<?php echo $count?>-<?php echo $second_count?>"></span><span style="font-size:14px" id="format-<?php echo $count?>-<?php echo $second_count?>"></span></h2>
                                                                                          </td>
                                                                                     </tr>
                                                                                 <?php
                                                                                  }
                                                                                  $second_count = 0; ?>
                                                                             </table>
-                                                                            <a class="PRODUCT-URL-<?php echo $count?>" href="http://www.BRANDDOMAIN/Search/Results?term=PRODUCT-TITLE-<?php echo $count?>">
-                                                                                <img data-id="PRE-ORDER-<?php echo $count?>" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-buy-now.gif" style="display:block;" class="buybutton" alt="Buy PRODUCT-TITLE-<?php echo $count?> Now" /></a>
+                                                                        <a id="product-url-<?php echo $count?>-<?php echo $second_count?>" href="http://www.DOMAIN">
+                                                                                <img id="pre-order-<?php echo $count?>" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-buy-now.gif" style="display:block;" class="buybutton" alt="Buy Now" /></a>
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -662,17 +665,16 @@
                                     <!-- BEGIN FOOTER // -->
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
                                         <tr>
-                                            <td valign="top" class="footerContent" style="padding-top:0px;"><br />BRAND name, design and related marks are registered. BRAND Entertainment Limited, registered in Ireland. No. 526619. Registered Office Greenhills Road, Tallaght, Dublin 24. &copy; 2015 BRAND.<br /><br />
+                                            <td valign="top" class="footerContent" style="padding-top:0px;"><br />
+                                                hmv Ireland Online Limited trading as Xtra-vision - hmv Ireland Online Limited, registered in Ireland. No. 534703. Registered Office Greenhills Road, Tallaght, Dublin 24. &copy; 2015 Xtra-vision<br /><br />
                                                 Offers and prices are correct at time of broadcast. BRAND reserve the right to remove these at any time. Only while stocks last.
                                             </td>
                                         </tr>
-                                    </table><!-- // END FOOTER -->
+                                    </table>
+                                    <!-- // END FOOTER -->
                                 </td>
                             </tr>
                             
-                           
-                            </table><!-- // END FOOTER -->
-
                         </table>
                     </td>
                 </tr>

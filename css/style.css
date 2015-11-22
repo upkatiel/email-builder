@@ -1,35 +1,42 @@
-body {
-    font-family: sans-serif;
-    font-size: 18px;
+.content {
+    display:none;
 }
 
-.tools{
+.tools {
     clear: both;
     padding-top: 50px;
 }
 
-.site-links{
+.site-links {
     padding-top: 20px;
     display: inline-block;
 }
 
-.site-links a{
+.site-links a {
     padding-left: 20px;
 }
 
-.product-box{
+.product-box {
     color: #2196F3;
-    background-color: #ddd;
-    border: 1px solid #ddd;
+    background-color: #eee;
+    border: 1px solid #ccc;
     padding: 20px;
 }
 
-.product-box:hover{
-    background-color: #eee;
-    border: 1px solid #ccc;
+.product-box:hover {
+    background-color: #ddd;
+    border: 1px solid #ddd;
+}
+
+a{
+    text-decoration: none;
 }
 
 a:hover{
+    text-decoration: none;
+}
+
+a:focus{
     text-decoration: none;
 }
 
@@ -39,7 +46,7 @@ a:hover{
 
 .priceBlock {
     float:left;
-    width:220px;
+    width:180px;
 }
 
 .price {
@@ -47,7 +54,7 @@ a:hover{
 }
 
 .format {
-    width: 180px;
+    width: 140px;
 }
 
 .bigBox {
@@ -79,4 +86,8 @@ a:hover{
     clear: both;
     display: block;
     min-height: 400px;
+}
+
+.done {
+    border-bottom: 1px solid rgba(0,200,0,1);
 }
