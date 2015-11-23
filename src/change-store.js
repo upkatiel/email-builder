@@ -8,8 +8,6 @@ var replaceit;
 
 function buildItYou(obj) {
     
-    $(obj).addClass( "done" );
-    
     Cookies.set($(obj).attr('id'), $(obj).val());
     
     if($(obj).val() == "") return;

@@ -40,11 +40,6 @@ function updateButtons(obj) {
 
 $(document).ready(function(){
     $("#mainHTML").load('mail-output.php');
-    $('.expander').simpleexpand({'hideMode': 'fadeToggle'});
-    
-    $('.expander').on("click",function(){
-        $('html,body').animate({scrollTop: $(this).offset().top}, 800);
-    });
     
     $( ".title" )
         .on('change',function() {

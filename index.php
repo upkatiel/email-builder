@@ -7,7 +7,6 @@
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="lib/minified/TweenMax.min.js"></script>
         <script src="lib/minified/jquery.gsap.min.js"></script>
-        <script src="lib/simple-expand.min.js"></script>
         <script src="//cdn.ckeditor.com/4.5.4/standard/ckeditor.js"></script>
         <script src="lib/mui.min.js"></script>
         <script src="lib/js.cookie.js"></script>
@@ -27,7 +26,7 @@
             <button class="mui-btn mui-btn--primary get-html">View HTML</button>
             <button class="mui-btn mui-btn--primary save-html">Save HTML</button>
             <button class="mui-btn mui-btn--primary load-it">Load Cookie</button>
-            <button class="mui-btn mui-btn--primary clear-it">Clear Cookie</button>
+            <!--button class="mui-btn mui-btn--primary clear-it">Clear Cookie</button-->
 
             <div class="mui-panel" style="margin-top:10px;">
                 <form id="formy" class="mui-form--inline">
@@ -68,7 +67,12 @@
                         <label>Title Text</label>
                     </div>
                 </form>
-                 <div style="padding-top:20px;display:inline-block;">Number of Products: <span id="number-of-products">3</span></div>
+                
+                <?php 
+                    $startcount = 3;
+                ?>
+                
+                <div style="padding-top:20px;display:inline-block;">Number of Products: <span id="number-of-products"><?php echo $startcount?></span></div>
                  <div class="site-links">
                      <a href="http://www.hmv.ie" target="_blank">hmv</a>
                      <a href="http://www.xtra-vision.co.uk" target="_blank">xtra-vision.co.uk</a>
@@ -77,23 +81,52 @@
                      <a href="http://www.xvmarketplace.ie" target="_blank">xvm.ie</a>
                 </div>
             </div>
+
+            <button class="mui-btn mui-btn--primary add-another">Add More</button>
+            <button class="mui-btn mui-btn--primary remove">Remove</button>
             
             <div class="forms">
-                <?php
-                // Start the first count at 0 outside the loop.
-                $count = 0;
-                // Start the second count at 0 outside the loop.
-                $second_count = 0;
-                // Arrays normally start at 0 so the count starts at 0 for good practice.
-                while($count <= 20) {
-                    // loop though until count is equal or less than 3
-                    // Plus one to the counter each loop
-                    $count++;
-                ?>
+                <ul class="mui-tabs__bar" style="width:100%; white-space: normal;">
+                      
+                    <?php 
+                        $count = 0;
+
+                        while($count <= 20) {
+                            $count++;
+                            if ($count == 1) {
+                                $class = 'mui--is-active';
+                            } else {
+                                $class = 'none';
+                            }
+                            if ($count > $startcount) {
+                                $style = 'display:none';
+                            } else {
+                                $style = '';
+                            }
+                        ?>
+                        
+                    <li class="show-box box-<?php echo $count?> <?php echo $class?>" style="<?php echo $style?>"><a data-mui-toggle="tab" data-mui-controls="pane-default-<?php echo $count?>">Item-<?php echo $count?></a></li>
+
+                    <?php  }?>
+                    
+                </ul>
                 
-                <div class="show-box box-<?php echo $count?>" <?php if ($count > 3) { echo 'style="display:none"' ; }?>>
-                    <a class="expander" data-expander-target=".content-<?php echo $count?>" href="#">
-                        <h2 class="mui-panel">Product <?php echo $count?></h2></a>
+                <?php 
+                    $count = 0;
+                
+                    $second_count = 0;
+
+                    while($count <= 20) {
+                        $count++;
+                        if ($count == 1) {
+                            $class = 'mui-tabs__pane mui--is-active';
+                        } else {
+                            $class = 'mui-tabs__pane';
+                        }
+                    ?>
+
+                <div class="<?php echo $class?>" id="pane-default-<?php echo $count?>">
+                
                     <div class="content-<?php echo $count?> mui-panel">
                         <div class="mui-textfield mui-textfield--float-label">
                             <input type="text" id="product-title-<?php echo $count?>" class="title" size="60" />
@@ -118,10 +151,10 @@
 
                         <form class="mui-form--inline">
 
-                            <?php while($second_count <= 2) {
-                    // loop though until count is equal or less than 2 - ADDS 3 PRICE/FORMAT blocks
-                    // Plus one to the counter each loop
-                    $second_count++;
+                        <?php while($second_count <= 2) {
+                        // loop though until count is equal or less than 2 - ADDS 3 PRICE/FORMAT blocks
+                        // Plus one to the counter each loop
+                        $second_count++;
                             ?>
                             <div class="priceBlock">
                                 <div class="mui-textfield mui-textfield--float-label price">
@@ -147,24 +180,18 @@
                             </div>
 
                             <?php }
-                            // Reset the counter to 1 or it will never loop again after the first 2.
-                            $second_count = 0; ?>
+                        // Reset the counter to 1 or it will never loop again after the first 2.
+                        $second_count = 0; ?>
 
                         </form>
                     </div>
+
+                    <div style="clear:both;"></div>
+                
                 </div>
-                <div style="clear:both;"></div>
+
                 <?php  }?>
-            </div>
-
-            <button class="mui-btn mui-btn--primary add-another">Add More</button>
-            <button class="mui-btn mui-btn--primary remove">Remove</button>
-            
-
-            <div class="tools">
-                <h2>Toools</h2>
-                <button class="mui-btn mui-btn--primary" onclick="goLinks();">Remove Links</button>
-                <button class="mui-btn mui-btn--primary" onclick="goAlt();">Remove Alt</button>
+                
             </div>
 
         </div>
@@ -175,10 +202,10 @@
         
         <script src="src/custom-email.js"></script>
         <script src="src/change-store.js"></script>
-        <script src="src/tools.js"></script>
         <script src="src/save-html.js"></script>
         <script src="src/load.js"></script>
         <script src="src/add-more.js"></script>
+        <script src="src/tabs.js"></script>
         
     </body>
 </html>
