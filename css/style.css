@@ -7,18 +7,38 @@
     display:none;
 }
 
+.hide {
+    display:none;
+}
+
+.clear-it{
+    float: right;
+}
+
 .tools {
     clear: both;
     padding-top: 50px;
 }
 
+.product-count{
+    padding-top:20px;
+    display:inline-block;
+}
+
 .site-links {
-    padding-top: 20px;
+    padding-top: 40px;
+    padding-right: 20px;
     display: inline-block;
+    float: right;
 }
 
 .site-links a {
+    color: white;
     padding-left: 20px;
+}
+
+.site-links a:hover {
+    text-decoration: underline;
 }
 
 .product-box {

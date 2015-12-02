@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Email Builder</title>
-        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="lib/jquery-2.1.4.min.js"></script>
         <script src="lib/minified/TweenMax.min.js"></script>
         <script src="lib/minified/jquery.gsap.min.js"></script>
         <script src="//cdn.ckeditor.com/4.5.4/standard/ckeditor.js"></script>
@@ -12,12 +12,21 @@
         <script src="lib/js.cookie.js"></script>
         <script src="lib/moment.min.js"></script>
         
+        <link href="http://www.xtra-vision.co.uk/Styles?v=dDdzXH6u5PNne_IcdeUf8MwRjNZubDIEsNvKypRCswM1" rel="stylesheet"/>
+        <script src="http://www.xtra-vision.co.uk/Scripts/Common?v=JHuAT9fmKWn9vj3MEEgIiw8UP09dmem6wagg7X1_qtU1"></script>
+        
         <link href="css/mui.min.css" rel="stylesheet" type="text/css" />
         <link href="css/style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <div class="mui-appbar">
-            <!-- content -->
+            <div class="site-links">
+                <a href="http://www.hmv.ie" target="_blank">hmv</a>
+                <a href="http://www.xtra-vision.co.uk" target="_blank">xtra-vision.co.uk</a>
+                <a href="http://www.xtra-vision.ie" target="_blank">xtra-vision.ie</a>
+                <a href="http://www.xvmarketplace.co.uk" target="_blank">xvm.co.uk</a>
+                <a href="http://www.xvmarketplace.ie" target="_blank">xvm.ie</a>
+            </div>
         </div>
         <div class="newsletter-tool">
             
@@ -52,40 +61,30 @@
                     </div>
                 </form>
             </div>
-            <div class="mui-panel">       
-                 <form id="formy-1" class="mui-form">
-                    <div class="mui-textfield mui-textfield--float-label">
-                        <input type="text" size="60" id="pre-header" />
-                        <label>Pre-header</label>
-                    </div>
-                    <div class="mui-textfield mui-textfield--float-label">
-                        <input type="text" size="60" id="intro-text" />
-                        <label>Introductory Text</label>
-                    </div>
-                    <div class="mui-textfield mui-textfield--float-label">
-                        <input type="text" size="60" id="title-text" />
-                        <label>Title Text</label>
-                    </div>
-                </form>
+            <div id="header" class="mui-panel hide">       
+                <div class="mui-textfield">
+                    <input type="text" size="60" id="pre-header" />
+                    <label>Pre-header</label>
+                </div>
+                <div class="mui-textfield">
+                    <input type="text" size="60" id="intro-text" />
+                    <label>Introductory Text</label>
+                </div>
+                <div class="mui-textfield">
+                    <input type="text" size="60" id="title-text" />
+                    <label>Title Text</label>
+                </div>
                 
                 <?php 
                     $startcount = 3;
                 ?>
-                
-                <div style="padding-top:20px;display:inline-block;">Number of Products: <span id="number-of-products"><?php echo $startcount?></span></div>
-                 <div class="site-links">
-                     <a href="http://www.hmv.ie" target="_blank">hmv</a>
-                     <a href="http://www.xtra-vision.co.uk" target="_blank">xtra-vision.co.uk</a>
-                     <a href="http://www.xtra-vision.ie" target="_blank">xtra-vision.ie</a>
-                     <a href="http://www.xvmarketplace.co.uk" target="_blank">xvm.co.uk</a>
-                     <a href="http://www.xvmarketplace.ie" target="_blank">xvm.ie</a>
-                </div>
             </div>
 
-            <button class="mui-btn mui-btn--primary add-another">Add More</button>
-            <button class="mui-btn mui-btn--primary remove">Remove</button>
-            
-            <div class="forms">
+            <!--div id="products" class="forms hide"-->
+            <div id="products" class="forms">
+                
+                <div class="product-count">Number of Products: <span id="number-of-products"><?php echo $startcount?></span></div>
+                
                 <ul class="mui-tabs__bar" style="width:100%; white-space: normal;">
                       
                     <?php 
@@ -124,79 +123,93 @@
                             $class = 'mui-tabs__pane';
                         }
                     ?>
-
-                <div class="<?php echo $class?>" id="pane-default-<?php echo $count?>">
                 
-                    <div class="content-<?php echo $count?> mui-panel">
-                        <div class="mui-textfield mui-textfield--float-label">
-                            <input type="text" id="product-title-<?php echo $count?>" class="title" size="60" />
-                            <label>Product Title</label>
-                        </div>
-                        <div class="mui-textfield mui-textfield--float-label">
-                            <input type="text" size="60" id="product-synopsis-<?php echo $count?>" class="product-synopsis" />
-                            <label>Product Synopsis</label>
-                        </div>
-                        <div class="mui-textfield mui-textfield--float-label">    
-                            <input type="text" size="60" id="image-url-<?php echo $count?>" class="image" />
-                            <label>Image URL</label>
-                        </div>
-                        <div class="mui-textfield mui-textfield--float-label">
-                            <input type="text" size="60" id="product-url-<?php echo $count?>" class="link" />
-                            <label>Product URL</label>
-                        </div>
-                        <div class="mui-checkbox">
-                            <input type="checkbox" name="pre-order" id="pre-order-<?php echo $count?>" />
-                            <label>Pre-order</label>
-                        </div>
-
-                        <form class="mui-form--inline">
-
-                        <?php while($second_count <= 2) {
-                        // loop though until count is equal or less than 2 - ADDS 3 PRICE/FORMAT blocks
-                        // Plus one to the counter each loop
-                        $second_count++;
-                            ?>
-                            <div class="priceBlock">
-                                <div class="mui-textfield mui-textfield--float-label price">
-                                    <input type="text" id="product-price-<?php echo $count?>-<?php echo $second_count?>" size="4" />
-                                    <label>Price</label>
+                <div class="<?php echo $class?>" id="pane-default-<?php echo $count?>">
+                    
+                        <div class="content-<?php echo $count?> mui-panel" style="clear:both;">
+                            
+                            <button class="mui-btn mui-btn--primary clear-it" data-id="content-<?php echo $count?>" >Clear</button>
+                            <h2>Product <?php echo $count?></h2>
+                            
+                            <div class="mui-panel">       
+                                <div class="mui-textfield">
+                                    <input type="text" size="60" id="product-sku" />
+                                    <label>Product SKU</label>
                                 </div>
-                                <div class="mui-select format">
-                                    <select id="format-<?php echo $count?>-<?php echo $second_count?>">
-                                        <option value="">Blank</option>
-                                        <option value="DVD">DVD</option>
-                                        <option value="Blu-ray">Blu-ray</option>
-                                        <option value="3D-Blu-ray">3D Blu-ray</option>
-                                        <option value="SteelBook">SteelBook</option>
-                                        <option value="Exclusive-SteelBook">Exclusive SteelBook</option>
-                                        <option value="CD">CD</option>
-                                        <option value="Deluxe-CD">Deluxe CD</option>
-                                        <option value="Vinyl">Vinyl</option>
-                                        <option value="Xbox-One">Xbox One</option>
-                                        <option value="PS4">PS4</option>
-                                        <option value="Console-Bundle">Console Bundle</option>
-                                    </select>
-                                </div>
+                                <button class="mui-btn mui-btn--primary get-sku" data-id="<?php echo $count?>">Get Product</button>
+                                <button class="mui-btn mui-btn--primary clear-sku">Clear Loaded</button>
+                            </div>
+                            
+                            <div class="mui-textfield">
+                                <input type="text" id="product-title-<?php echo $count?>" class="title" size="60" />
+                                <label>Product Title</label>
+                            </div>
+                            <div class="mui-textfield">
+                                <input type="text" size="60" id="product-synopsis-<?php echo $count?>" class="product-synopsis" />
+                                <label>Product Synopsis</label>
+                            </div>
+                            <div class="mui-textfield">    
+                                <input type="text" size="60" id="image-url-<?php echo $count?>" class="image" />
+                                <label>Image URL</label>
+                            </div>
+                            <div class="mui-textfield">
+                                <input type="text" size="60" id="product-url-<?php echo $count?>" class="link" />
+                                <label>Product URL</label>
+                            </div>
+                            <div class="mui-checkbox">
+                                <input type="checkbox" name="pre-order" id="pre-order-<?php echo $count?>" />
+                                <label>Pre-order</label>
                             </div>
 
-                            <?php }
-                        // Reset the counter to 1 or it will never loop again after the first 2.
-                        $second_count = 0; ?>
+                            <?php while($second_count <= 2) {
+                            // loop though until count is equal or less than 2 - ADDS 3 PRICE/FORMAT blocks
+                            // Plus one to the counter each loop
+                            $second_count++;
+                                ?>
+                                <div class="priceBlock">
+                                    <div class="mui-textfield price">
+                                        <input type="text" id="product-price-<?php echo $count?>-<?php echo $second_count?>" size="4" />
+                                        <label>Price</label>
+                                    </div>
+                                    <div class="mui-select format">
+                                        <select id="format-<?php echo $count?>-<?php echo $second_count?>">
+                                            <option value="">Blank</option>
+                                            <option value="DVD">DVD</option>
+                                            <option value="Blu-ray">Blu-ray</option>
+                                            <option value="3D-Blu-ray">3D Blu-ray</option>
+                                            <option value="SteelBook">SteelBook</option>
+                                            <option value="Exclusive-SteelBook">Exclusive SteelBook</option>
+                                            <option value="CD">CD</option>
+                                            <option value="Deluxe-CD">Deluxe CD</option>
+                                            <option value="Vinyl">Vinyl</option>
+                                            <option value="Xbox-One">Xbox One</option>
+                                            <option value="PS4">PS4</option>
+                                            <option value="Console-Bundle">Console Bundle</option>
+                                        </select>
+                                    </div>
+                                </div>
 
-                        </form>
+                                <?php }
+                            // Reset the counter to 1 or it will never loop again after the first 2.
+                            $second_count = 0; ?>
+
+                        </div>
+
+                        <div style="clear:both;"></div>
+
                     </div>
 
-                    <div style="clear:both;"></div>
-                
-                </div>
-
                 <?php  }?>
+                
+                <button class="mui-btn mui-btn--primary add-another">Add More</button>
+                <button class="mui-btn mui-btn--primary remove">Remove</button>
                 
             </div>
 
         </div>
         <div class="output-wrapper">
-            <div id="mainHTML" style=""></div>
+            <div id="mainHTML"></div>
+            <div id="siteHTML" class="hide"></div>
             <textarea id="quine"></textarea>
         </div>
         
@@ -206,6 +219,8 @@
         <script src="src/load.js"></script>
         <script src="src/add-more.js"></script>
         <script src="src/tabs.js"></script>
+        <script src="src/clear-forms.js"></script>
+        <script src="src/get-product.js"></script>
         
     </body>
 </html>

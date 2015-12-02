@@ -637,7 +637,7 @@
                                                                                  }
                                                                                  $second_count = 0; ?>
                                                                             </table>
-                                                                        <a id="product-url-<?php echo $count?>-<?php echo $second_count?>" href="http://www.DOMAIN">
+                                                                        <a id="product-url-<?php echo $count?>" href="http://www.DOMAIN">
                                                                                 <img id="pre-order-<?php echo $count?>" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-buy-now.gif" style="display:block;" class="buybutton" alt="Buy Now" /></a>
                                                                     </td>
                                                                 </tr>

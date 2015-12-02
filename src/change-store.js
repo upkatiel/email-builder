@@ -25,6 +25,10 @@ function buildItYou(obj) {
     $('#bodyTable #' + replaceData).each(function (k, v) {
         $(this).html(text);
     });
+    
+    if($("#pre-header").val() != '' && $("#intro-text").val() != '' && $("#title-text").val() != ''){
+        $('#products').removeClass('hide');
+    }
 };
 
 function storeChange(obj) {
@@ -86,6 +90,8 @@ function storeChange(obj) {
         tagArray[k] = productArray[k];
         tagArray1[k] = domainArray[k];
     }
+    
+    $('#header').removeClass('hide');
 }
 
 function findStoreStuff(findme,replaceit) {  
