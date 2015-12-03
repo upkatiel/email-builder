@@ -1,7 +1,7 @@
 var productArray = ["hmv-ie", "hmv", "€"]
 var domainArray = ["hmv.ie", "movies-games-entertainment"]
-var tagArray = ["STORE", "BRAND", "CURRENCY"];
-var tagArray1 = ["DOMAIN", "movies-games-entertainment"]
+var tagArray = ["STORE", "hmv", "CURRENCY"];
+var tagArray1 = ["hmv.ie", "movies-games-entertainment"]
 var currentDate;
 var findme;
 var replaceit;
@@ -11,6 +11,7 @@ function buildItYou(obj) {
     Cookies.set($(obj).attr('id'), $(obj).val());
     
     if($(obj).val() == "") return;
+    
     var text = $(obj).val(); 
     var replaceData = $(obj).attr('id');
 
@@ -19,7 +20,11 @@ function buildItYou(obj) {
     };
     
     if (!replaceData.indexOf('product-price')) {
-        text = productArray[2] + text + "&nbsp;";
+        if($(obj).val() == "" || $(obj).val() == " ") {
+            
+        } else{
+            text = productArray[2] + text + "&nbsp;";
+        }
     };
     
     $('#bodyTable #' + replaceData).each(function (k, v) {
@@ -91,7 +96,7 @@ function storeChange(obj) {
         tagArray1[k] = domainArray[k];
     }
     
-    $('#header').removeClass('hide');
+    //$('#header').removeClass('hide');
 }
 
 function findStoreStuff(findme,replaceit) {  
@@ -115,5 +120,7 @@ $(document).ready(function(){
         .on('change',function() {
         buildItYou(this);
     });
+    
+    $("#hmv-ie").attr('checked', true).trigger('click');
     
 });

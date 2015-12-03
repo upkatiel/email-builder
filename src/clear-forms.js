@@ -10,6 +10,8 @@ $('.clear-it').click(function() {
                 case 'file':
                 case 'select-one':
                 case 'select-multiple':
+                    $(this).val(' ');
+                    $(this).change();
                     $(this).val('');
                     break;
                 case 'checkbox':

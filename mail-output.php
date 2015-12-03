@@ -497,8 +497,8 @@
                                                             <table border="0" cellpadding="0" cellspacing="0">
                                                                 <tr>
                                                                     <td class="headerContent">
-                                                                        <a href="http://www.DOMAIN">
-                                                                            <img src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-header.gif" style="display:block; max-width:600px;" class="headerImage" alt="BRAND" /></a>
+                                                                        <a href="http://www.hmv.ie">
+                                                                            <img src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/hmv-header.gif" style="display:block; max-width:600px;" class="headerImage" alt="hmv" /></a>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -532,7 +532,7 @@
                                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                             <tr>
                                                                 <td align="center" class="leftColumnContent">
-                                                                    <a id="product-url-1" href="http://www.DOMAIN">
+                                                                    <a id="product-url-1" href="http://www.hmv.ie">
                                                                         <img id="image-url-1" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/hmv-no-packshot.gif" style="display:block; max-width:280px;" width="240" class="columnImage" alt="product-title-1" />
                                                                     </a>
                                                                 </td>
@@ -562,8 +562,8 @@
                                                                             </td>
                                                                         </tr>
                                                                     </table>
-                                                                    <a id="product-url-1" href="http://www.DOMAIN">
-                                                                        <img id="pre-order-1" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-buy-now.gif" style="display:block;" class="buybutton" alt="Buy Now" />
+                                                                    <a id="product-url-1" href="http://www.hmv.ie">
+                                                                        <img id="pre-order-1" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/hmv-buy-now.gif" style="display:block;" class="buybutton" alt="Buy Now" />
                                                                     </a>
                                                                 </td>
                                                             </tr>
@@ -617,7 +617,7 @@
                                                             <table border="0" cellpadding="0" cellspacing="0" width="100%" class="show-box box-<?php echo $count?>" <?php if ($count > 3) { echo 'style="display:none"'; }?>>
                                                                 <tr>
                                                                     <td align="center" class="<?php echo $class?>">
-                                                                        <a id="product-url-<?php echo $count?>" href="http://www.DOMAIN">
+                                                                        <a id="product-url-<?php echo $count?>" href="http://www.hmv.ie">
                                                                             <img id="image-url-<?php echo $count?>" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/hmv-no-packshot.gif" style="display:block; max-width:280px;" width="200" class="columnImage" alt="product-title-<?php echo $count?>" /></a>
                                                                     </td>
                                                                 </tr>
@@ -637,8 +637,8 @@
                                                                                  }
                                                                                  $second_count = 0; ?>
                                                                             </table>
-                                                                        <a id="product-url-<?php echo $count?>" href="http://www.DOMAIN">
-                                                                                <img id="pre-order-<?php echo $count?>" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-buy-now.gif" style="display:block;" class="buybutton" alt="Buy Now" /></a>
+                                                                        <a id="product-url-<?php echo $count?>" href="http://www.hmv.ie">
+                                                                                <img id="pre-order-<?php echo $count?>" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/hmv-buy-now.gif" style="display:block;" class="buybutton" alt="Buy Now" /></a>
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -667,7 +667,7 @@
                                         <tr>
                                             <td valign="top" class="footerContent" style="padding-top:0px;"><br />
                                                 hmv Ireland Online Limited trading as Xtra-vision - hmv Ireland Online Limited, registered in Ireland. No. 534703. Registered Office Greenhills Road, Tallaght, Dublin 24. &copy; 2015 Xtra-vision<br /><br />
-                                                Offers and prices are correct at time of broadcast. BRAND reserve the right to remove these at any time. Only while stocks last.
+                                                Offers and prices are correct at time of broadcast. hmv reserve the right to remove these at any time. Only while stocks last.
                                             </td>
                                         </tr>
                                     </table>
@@ -682,4 +682,4 @@
             <!-- // END TEMPLATE -->
         </center>
     </body>
-</html><!--/center> </body></html-->
+</html><!--/body></html-->

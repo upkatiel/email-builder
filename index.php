@@ -61,7 +61,7 @@
                     </div>
                 </form>
             </div>
-            <div id="header" class="mui-panel hide">       
+            <div id="header" class="mui-panel">       
                 <div class="mui-textfield">
                     <input type="text" size="60" id="pre-header" />
                     <label>Pre-header</label>
@@ -80,8 +80,7 @@
                 ?>
             </div>
 
-            <!--div id="products" class="forms hide"-->
-            <div id="products" class="forms">
+            <div id="products" class="forms hide">
                 
                 <div class="product-count">Number of Products: <span id="number-of-products"><?php echo $startcount?></span></div>
                 
@@ -128,16 +127,17 @@
                     
                         <div class="content-<?php echo $count?> mui-panel" style="clear:both;">
                             
-                            <button class="mui-btn mui-btn--primary clear-it" data-id="content-<?php echo $count?>" >Clear</button>
                             <h2>Product <?php echo $count?></h2>
                             
                             <div class="mui-panel">       
-                                <div class="mui-textfield">
-                                    <input type="text" size="60" id="product-sku" />
+                                <div class="mui-textfield" style="width:30%; float:left; padding-right:20px;">
+                                    <input type="text" size="60" id="product-sku-<?php echo $count?>" />
                                     <label>Product SKU</label>
                                 </div>
-                                <button class="mui-btn mui-btn--primary get-sku" data-id="<?php echo $count?>">Get Product</button>
-                                <button class="mui-btn mui-btn--primary clear-sku">Clear Loaded</button>
+                                <div style="float:left;">
+                                    <button class="mui-btn mui-btn--primary get-sku" data-id="<?php echo $count?>">Find Product</button>
+                                    <button class="mui-btn mui-btn--primary clear-it" data-id="content-<?php echo $count?>" >Clear All</button>
+                                </div>
                             </div>
                             
                             <div class="mui-textfield">

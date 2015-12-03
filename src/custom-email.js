@@ -27,6 +27,7 @@ function changeLink(obj){
     $('#bodyTable #' + replaceData).attr('href', val);
 }
 
+// Swap button images when pre-order check box clicked
 function updateButtons(obj) {
     replaceData = $(obj).attr('id');
     if($(obj).is(':checked')){
