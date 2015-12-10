@@ -185,6 +185,8 @@
                                             <option value="Xbox-One">Xbox One</option>
                                             <option value="PS4">PS4</option>
                                             <option value="Console-Bundle">Console Bundle</option>
+                                            <option value="Poster">Poster</option>
+                                            <option value="t-shirt">T-shirt</option>
                                         </select>
                                     </div>
                                 </div>

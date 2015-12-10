@@ -1,8 +1,12 @@
 $('.get-sku').click(function(event) {
+    getAproduct($(this).attr("data-id"))
+});
+
+function getAproduct(sku){
     
     $( "#siteHTML" ).empty();
     //$('#product-sku').val('51099');
-    var currentProduct = $(this).attr("data-id");
+    var currentProduct = sku;
     var currentSku = $('#product-sku-' + currentProduct).val();
 
     var jqxhr = $.get( 'http://www.hmv.ie/movies-games-entertainment/pd/' + currentSku, function() {
@@ -21,7 +25,7 @@ $('.get-sku').click(function(event) {
         .always(function() {
             
         });
-});
+};
 
 function getFromHtml(currentProduct){
     $('#product-title-' + currentProduct).val($('#siteHTML .title h1').html());
