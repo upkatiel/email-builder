@@ -147,6 +147,10 @@
                 font-size:10px;
                 line-height:125%;
                 text-align:left;
+                padding-top:10px;
+                padding-right:20px;
+                padding-bottom:10px;
+                padding-left:20px;
             }
 
             .preheaderContent a:link,.preheaderContent a:visited,.preheaderContent a .yshortcuts{
@@ -181,6 +185,7 @@
             #headerImage{
                 height:auto;
                 max-width:600px;
+                display:block;
             }
 
             #templateBody{
@@ -272,6 +277,11 @@
             .leftColumnContent img,.rightColumnContent img{
                 display:inline;
                 height:auto;
+                max-width:280px;
+            }
+            
+            .columnImage{
+                display:block;
                 max-width:280px;
             }
 
@@ -459,12 +469,8 @@
         <o:PixelsPerInch>96</o:PixelsPerInch>
         </o:OfficeDocumentSettings>
     </xml><![endif]-->
-        
     <!--/head>
-    <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0"-->
-    
-    </head>
-    <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+    <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0"body--></head><body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
         <center>
             <div class="mktEditable" id="edit_text_1" ></div>
             <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" id="bodyTable">
@@ -477,7 +483,7 @@
                                     <!-- BEGIN PREHEADER // -->
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templatePreheader">
                                         <tr>
-                                            <td valign="top" class="preheaderContent" style="padding-top:10px; padding-right:20px; padding-bottom:10px; padding-left:20px;">
+                                            <td valign="top" class="preheaderContent">
                                                 <div id="pre-header"></div>
                                             </td>
                                         </tr>
@@ -498,7 +504,7 @@
                                                                 <tr>
                                                                     <td class="headerContent">
                                                                         <a href="http://www.hmv.ie">
-                                                                            <img src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/hmv-header.gif" style="display:block; max-width:600px;" class="headerImage" alt="hmv" /></a>
+                                                                            <img src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/hmv-header.gif" style="max-width:600px;" class="headerImage" alt="hmv" /></a>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -533,7 +539,7 @@
                                                             <tr>
                                                                 <td align="center" class="leftColumnContent">
                                                                     <a id="product-url-1" href="http://www.hmv.ie">
-                                                                        <img id="image-url-1" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/hmv-no-packshot.gif" style="display:block; max-width:280px;" width="240" class="columnImage" alt="product-title-1" />
+                                                                        <img id="image-url-1" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/hmv-no-packshot.gif" width="240" class="columnImage" alt="product-title-1" />
                                                                     </a>
                                                                 </td>
                                                             </tr>
@@ -575,7 +581,6 @@
                                     </tr>
                                 </table>
                             </tr>
-                
                             <tr>
                                 <td align="center" valign="top">
                                     <!-- BEGIN COLUMNS // -->
@@ -584,19 +589,14 @@
                                             <td> 
                                                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                     <tr>
-
                                                         <?php
-                                                            // Start the first count at 0 outside the loop.
                                                             $count = 1;
-                                                            // Start the second count at 0 outside the loop.
                                                             $second_count = 0;
-                                                            // Arrays normally start at 0 so the count starts at 0 for good practice.
+                                                            
                                                             while($count <= 20) {
-                                                            // loop though until count is equal or less than 3
-                                                            // Plus one to the counter each loop
                                                             $count++;
                                                                 if ($count % 2 == 0) {
-                                                                   $class = 'leftColumnContent';
+                                                                    $class = 'leftColumnContent';
                                                                     $sep = '';
                                                                 } else {
                                                                     $class = 'rightColumnContent';
@@ -609,16 +609,14 @@
                                                                 }
                                                                 if ($count % 2 == 0) {
                                                                    echo '</tr><tr>';
-
                                                                }
                                                             ?>
-                                                    
                                                         <td align="center" valign="top" class="templateColumnContainer">
                                                             <table border="0" cellpadding="0" cellspacing="0" width="100%" class="show-box box-<?php echo $count?>" <?php if ($count > 3) { echo 'style="display:none"'; }?>>
                                                                 <tr>
                                                                     <td align="center" class="<?php echo $class?>">
                                                                         <a id="product-url-<?php echo $count?>" href="http://www.hmv.ie">
-                                                                            <img id="image-url-<?php echo $count?>" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/hmv-no-packshot.gif" style="display:block; max-width:280px;" width="200" class="columnImage" alt="product-title-<?php echo $count?>" /></a>
+                                                                            <img id="image-url-<?php echo $count?>" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/hmv-no-packshot.gif" width="200" class="columnImage" alt="product-title-<?php echo $count?>" /></a>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -628,11 +626,9 @@
                                                                             <table>
                                                                                 <?php while($second_count <= 2) {
                                                                                      $second_count++; ?>
-                                                                                     <tr>
-                                                                                         <td>
-                                                                                            <h2><span id="product-price-<?php echo $count?>-<?php echo $second_count?>"></span><span style="font-size:14px" id="format-<?php echo $count?>-<?php echo $second_count?>"></span></h2>
-                                                                                         </td>
-                                                                                    </tr>
+<tr><td>
+<h2><span id="product-price-<?php echo $count?>-<?php echo $second_count?>"></span><span style="font-size:14px" id="format-<?php echo $count?>-<?php echo $second_count?>"></span></h2>
+</td></tr>
                                                                                 <?php
                                                                                  }
                                                                                  $second_count = 0; ?>
@@ -643,10 +639,8 @@
                                                                 </tr>
                                                             </table>
                                                         </td>
-                                            
                                                      <?php echo $sep;
                                                             } ?>
-                                
                                                     </tr>
                                                 </table>
                                             </td>
@@ -654,19 +648,16 @@
                                     </table>
                                 </td>
                             </tr>
-                           
-
                             <tr class='last-1'>
                                 <td height="20" bgcolor="#FFFFFF"></td>
                             </tr>
-
                             <tr>
                                 <td align="center" valign="top">
                                     <!-- BEGIN FOOTER // -->
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
                                         <tr>
                                             <td valign="top" class="footerContent" style="padding-top:0px;"><br />
-                                                hmv Ireland Online Limited trading as Xtra-vision - hmv Ireland Online Limited, registered in Ireland. No. 534703. Registered Office Greenhills Road, Tallaght, Dublin 24. &copy; 2015 Xtra-vision<br /><br />
+                                                <div id="store-footer">hmv name and related marks are registered. hmv Ireland Online Limited, registered in Ireland. No. 534703. Registered Office Greenhills Road, Tallaght, Dublin 24. &copy; 2015 hmv</div><br />
                                                 Offers and prices are correct at time of broadcast. hmv reserve the right to remove these at any time. Only while stocks last.
                                             </td>
                                         </tr>
