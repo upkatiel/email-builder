@@ -1,5 +1,13 @@
 function downloadInnerHtml(filename, elId, mimeType) {
     
+    // inline all CSS
+    var rules = document.styleSheets[document.styleSheets.length-1].cssRules;
+    for (var idx = 0, len = rules.length; idx < len; idx++) {
+        $(rules[idx].selectorText).each(function (i, elem) {
+            elem.style.cssText += rules[idx].style.cssText;
+        });
+    }
+    
     var html = $('#mainHTML').html();
     html_array1 = removeHidden(html);
     html = $('#mainHTML').html();
@@ -9,24 +17,16 @@ function downloadInnerHtml(filename, elId, mimeType) {
     var findArray = ["<!--DOCTYPE", "<head\-->", "<!--/head>", "body\-->", "<!--/body></html\-->","</tr><tr>"," "];
     var replaceArray = ["<!DOCTYPE", "<head>", "</head>", ">", "</body></html>","",""];
 
-    $('#quine').val($('#mainHTML').html());
-
     for (var k = 0; k < findArray.length; k++) {
         findCommented(findArray[k],replaceArray[k]);
     }
     
-    var rules = document.styleSheets[document.styleSheets.length-1].cssRules;
-    for (var idx = 0, len = rules.length; idx < len; idx++) {
-        $(rules[idx].selectorText).each(function (i, elem) {
-            elem.style.cssText += rules[idx].style.cssText;
-        });
-    }
-
+    // save file
     var link = document.createElement('a');
     mimeType = mimeType || 'text/plain';
 
     link.setAttribute('download', filename);
-    link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(html));
+    link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent($('#quine').val()));
     link.click(); 
 }
 

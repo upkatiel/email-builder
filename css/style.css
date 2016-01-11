@@ -116,3 +116,16 @@ a:focus{
 .done {
     border-bottom: 1px solid rgba(0,200,0,1);
 }
+
+
+@media only screen and (max-width: 480px){
+    .site-links {
+        padding-top: 5px;
+    }
+    .mui-btn+.mui-btn {
+        margin-left: 0px;
+    }
+    .mui-checkbox>label, .mui-radio>label{
+        padding-left: 0px;
+    }
+}

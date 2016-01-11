@@ -1,15 +1,22 @@
 $('.get-sku').click(function(event) {
-    getAproduct($(this).attr("data-id"))
+    var store = $('input[name=store]:checked', '#formy').val();
+    getAproduct(store, $(this).attr("data-id"));
 });
 
-function getAproduct(sku){
+function getAproduct(store,sku){
     
     $( "#siteHTML" ).empty();
-    //$('#product-sku').val('51099');
     var currentProduct = sku;
     var currentSku = $('#product-sku-' + currentProduct).val();
-
-    var jqxhr = $.get( 'http://www.hmv.ie/movies-games-entertainment/pd/' + currentSku, function() {
+    var siteUrl;
+    
+    if (store == "xvm-uk" || store == "xvm-ie"){
+        siteUrl = 'http://www.xvmarketplace.co.uk/movies-games/pd/';
+    } else {
+        siteUrl = 'http://www.hmv.ie/movies-games-entertainment/pd/';
+    }
+    
+    var jqxhr = $.get(siteUrl + currentSku, function() {
     })
         .done(function(data) {
             
@@ -17,7 +24,7 @@ function getAproduct(sku){
            $("#siteHTML").html(data);
            $("#siteHTML").find('#product');
           // console.log(data);
-            getFromHtml(currentProduct);
+            getFromHtml(siteUrl,currentProduct);
         })
         .fail(function() {
             $('#product-sku').val('Error getting product - Check SKU? / CORS?');
@@ -27,7 +34,7 @@ function getAproduct(sku){
         });
 };
 
-function getFromHtml(currentProduct){
+function getFromHtml(siteUrl,currentProduct){
     $('#product-title-' + currentProduct).val($('#siteHTML .title h1').html());
     $('#product-title-' + currentProduct).change();
 
@@ -35,10 +42,10 @@ function getFromHtml(currentProduct){
     $('#product-synopsis-' + currentProduct).val(newStr);
     $('#product-synopsis-' + currentProduct).change();
  
-    $('#image-url-' + currentProduct).val($('#siteHTML .largeImage img').attr('src'));
+    $('#image-url-' + currentProduct).val("http:" + $('#siteHTML .largeImage img').attr('src'));
     $('#image-url-' + currentProduct).change();
 
-    $('#product-url-' + currentProduct).val('http://www.hmv.ie/movies-games-entertainment/pd/' + $('#product-sku-' + currentProduct).val());
+    $('#product-url-' + currentProduct).val(siteUrl + $('#product-sku-' + currentProduct).val());
     $('#product-url-' + currentProduct).change();
 
     var trimmedprice = $('#siteHTML .priceAndButton .price').html().substring(1);

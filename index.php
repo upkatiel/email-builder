@@ -31,10 +31,11 @@
         <div class="newsletter-tool">
             
             <h1 id="title">Newsletter tool</h1>
-            
-            <button class="mui-btn mui-btn--primary get-html">View HTML</button>
-            <button class="mui-btn mui-btn--primary save-html">Save HTML</button>
-            <button class="mui-btn mui-btn--primary load-it">Load Cookie</button>
+            <div id="buttons">
+                <button class="mui-btn mui-btn--primary get-html">View HTML</button>
+                <button class="mui-btn mui-btn--primary save-html">Save HTML</button>
+                <button class="mui-btn mui-btn--primary load-it">Load Cookie</button>
+            </div>
             <!--button class="mui-btn mui-btn--primary clear-it">Clear Cookie</button-->
 
             <div class="mui-panel" style="margin-top:10px;">

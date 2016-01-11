@@ -116,21 +116,19 @@ function footerSwap(store) {
 
     switch (store) {
         case "hmv":
-            storeText = "hmv name and related marks are registered. hmv Ireland Online Limited, registered in Ireland. No. 534703. Registered Office Greenhills Road, Tallaght, Dublin 24. &copy; 2015 hmv";
+            storeText = "hmv name and related marks are registered. hmv Ireland Online Limited, registered in Ireland. No. 534703. Registered Office Greenhills Road, Tallaght, Dublin 24. &copy; 2016 hmv";
             break;
         case "Xtra-vision":
-            storeText = "hmv Ireland Online Limited trading as Xtra-vision - hmv Ireland Online Limited, registered in Ireland. No. 534703. Registered Office Greenhills Road, Tallaght, Dublin 24. &copy; 2015 Xtra-vision";
+            storeText = "hmv Ireland Online Limited trading as Xtra-vision - hmv Ireland Online Limited, registered in Ireland. No. 534703. Registered Office Greenhills Road, Tallaght, Dublin 24. &copy; 2016 Xtra-vision";
             break;
         case "XVMarketplace":
-            storeText = "hmv Ireland Online Limited trading as XV Marketplace - hmv Ireland Online Limited, registered in Ireland. No. 534703. Registered Office Greenhills Road, Tallaght, Dublin 24. &copy; 2015 Xtra-vision";
+            storeText = "hmv Ireland Online Limited trading as XV Marketplace - hmv Ireland Online Limited, registered in Ireland. No. 534703. Registered Office Greenhills Road, Tallaght, Dublin 24. &copy; 2016 Xtra-vision";
             break;
     }
 
     $("#store-footer").html(storeText);
     //alert(storeText);
 }
-
-
 
 $(document).ready(function(){
     currentDate = ( moment().format('DDMMYYYY') );
@@ -146,5 +144,4 @@ $(document).ready(function(){
     });
     
     $("#hmv-ie").attr('checked', true).trigger('click');
-    
 });
