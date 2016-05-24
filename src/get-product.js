@@ -12,6 +12,8 @@ function getAproduct(store,sku){
     
     if (store == "xvm-uk" || store == "xvm-ie"){
         siteUrl = 'http://www.xvmarketplace.co.uk/movies-games/pd/';
+    } else if (store =="hmvdigital") {
+        siteUrl = 'https://www.hmvdigital.ie/releases/';
     } else {
         siteUrl = 'http://www.hmv.ie/movies-games-entertainment/pd/';
     }
@@ -24,7 +26,12 @@ function getAproduct(store,sku){
            $("#siteHTML").html(data);
            $("#siteHTML").find('#product');
           // console.log(data);
-            getFromHtml(siteUrl,currentProduct);
+            if (store =="hmvdigital"){
+                getFromDigitalHtml(siteUrl,currentProduct);
+            } else {
+                getFromHtml(siteUrl,currentProduct);  
+            }
+            
         })
         .fail(function() {
             $('#product-sku').val('Error getting product - Check SKU? / CORS?');
@@ -34,14 +41,34 @@ function getAproduct(store,sku){
         });
 };
 
+function getFromDigitalHtml(siteUrl,currentProduct){
+    $('#product-title-' + currentProduct).val($('#siteHTML h1 .title').html());
+    $('#product-title-' + currentProduct).change();
+    
+    $('#product-synopsis-' + currentProduct).val('By ' + $('.by .artist').html());
+    $('#product-synopsis-' + currentProduct).change();
+    
+    $('#image-url-' + currentProduct).val("http:" + $('.packshot').attr('src'));
+    $('#image-url-' + currentProduct).change();
+    
+    $('#product-url-' + currentProduct).val(siteUrl + $('#product-sku-' + currentProduct).val());
+    $('#product-url-' + currentProduct).change();
+    
+    var trimmedprice = $('#siteHTML .price .price').html().substring(1);
+    $('#product-price-' + currentProduct + '-1').val(trimmedprice);
+    $('#product-price-' + currentProduct + '-1').change();
+    
+}
+    
 function getFromHtml(siteUrl,currentProduct){
+
     $('#product-title-' + currentProduct).val($('#siteHTML .title h1').html());
     $('#product-title-' + currentProduct).change();
 
-    var newStr = $.trim($('#siteHTML .informations .content div').html().substr(0, 300) + "...");
+    var newStr = $.trim($('#descriptiontab .content').html().substr(0, 300) + "...");
     $('#product-synopsis-' + currentProduct).val(newStr);
     $('#product-synopsis-' + currentProduct).change();
- 
+
     $('#image-url-' + currentProduct).val("http:" + $('#siteHTML .largeImage img').attr('src'));
     $('#image-url-' + currentProduct).change();
 

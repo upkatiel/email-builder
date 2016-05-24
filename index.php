@@ -22,6 +22,7 @@
         <div class="mui-appbar">
             <div class="site-links">
                 <a href="http://www.hmv.ie" target="_blank">hmv</a>
+                <a href="http://www.hmvdigital.ie" target="_blank">hmv digital</a>
                 <a href="http://www.xtra-vision.co.uk" target="_blank">xtra-vision.co.uk</a>
                 <a href="http://www.xtra-vision.ie" target="_blank">xtra-vision.ie</a>
                 <a href="http://www.xvmarketplace.co.uk" target="_blank">xvm.co.uk</a>
@@ -43,6 +44,10 @@
                     <div class="mui-radio store">
                         <input type="radio" id="hmv-ie" name="store" value="hmv-ie" data-id="hmv">
                         <label>hmv</label>
+                    </div>
+                    <div class="mui-radio store">
+                        <input type="radio" id="hmvdigital" name="store" value="hmvdigital" data-id="hmv Digital">
+                        <label>hmv Digital</label>
                     </div>
                     <div class="mui-radio store">
                         <input type="radio" id="xv-ie" name="store" value="xv-ie" data-id="Xtra-vision">
@@ -188,6 +193,8 @@
                                             <option value="Console-Bundle">Console Bundle</option>
                                             <option value="Poster">Poster</option>
                                             <option value="T-shirt">T-shirt</option>
+                                            <option value="Digital-Album">Digital Album</option>
+                                            <option value="Digital-Single">Digital Single</option>
                                         </select>
                                     </div>
                                 </div>

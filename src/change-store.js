@@ -50,7 +50,15 @@ function storeChange(obj) {
         productArray.push("€");
         
         domainArray.push("hmv.ie");
-        domainArray.push("movies-games-entertainment"); 
+        domainArray.push("movies-games-entertainment");
+    } else if (store == "hmvdigital") {
+        productArray.push("hmvdigital");
+        productArray.push("hmvdigital");
+        productArray.push("£");
+
+        domainArray.push("hmv.com");
+        domainArray.push("releases");
+    
     } else if (store == "xv-ie") {
         productArray.push("xv-ie");
         productArray.push("Xtra-vision");
@@ -117,6 +125,9 @@ function footerSwap(store) {
     switch (store) {
         case "hmv":
             storeText = "hmv name and related marks are registered. hmv Ireland Online Limited, registered in Ireland. No. 534703. Registered Office Greenhills Road, Tallaght, Dublin 24. &copy; 2016 hmv";
+            break;
+        case "hmv-digital":
+            storeText = "hmv name and related marks are registered. &copy; 2016 hmv";
             break;
         case "Xtra-vision":
             storeText = "hmv Ireland Online Limited trading as Xtra-vision - hmv Ireland Online Limited, registered in Ireland. No. 534703. Registered Office Greenhills Road, Tallaght, Dublin 24. &copy; 2016 Xtra-vision";

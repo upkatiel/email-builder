@@ -258,6 +258,10 @@
                 margin-bottom: 10px;
             }
             
+            .buybutton{
+                max-width:126px !important;
+            }
+            
             .rightColumnContent{
                 color:#505050;
                 font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
