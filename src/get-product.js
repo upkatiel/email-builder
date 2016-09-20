@@ -10,9 +10,7 @@ function getAproduct(store,sku){
     var currentSku = $('#product-sku-' + currentProduct).val();
     var siteUrl;
     
-    if (store == "xvm-uk" || store == "xvm-ie"){
-        siteUrl = 'http://www.xvmarketplace.co.uk/movies-games/pd/';
-    } else if (store =="hmvdigital") {
+    if (store =="hmvdigital") {
         siteUrl = 'https://www.hmvdigital.ie/releases/';
     } else {
         siteUrl = 'http://www.hmv.ie/movies-games-entertainment/pd/';
@@ -48,7 +46,7 @@ function getFromDigitalHtml(siteUrl,currentProduct){
     $('#product-synopsis-' + currentProduct).val('By ' + $('.by .artist').html());
     $('#product-synopsis-' + currentProduct).change();
     
-    $('#image-url-' + currentProduct).val("http:" + $('.packshot').attr('src'));
+    $('#image-url-' + currentProduct).val($('#content article header div.packshot a:nth-child(1)').attr('href'));
     $('#image-url-' + currentProduct).change();
     
     $('#product-url-' + currentProduct).val(siteUrl + $('#product-sku-' + currentProduct).val());
@@ -57,6 +55,7 @@ function getFromDigitalHtml(siteUrl,currentProduct){
     var trimmedprice = $('#siteHTML .price .price').html().substring(1);
     $('#product-price-' + currentProduct + '-1').val(trimmedprice);
     $('#product-price-' + currentProduct + '-1').change();
+    $('.butclass-' + currentProduct + '-1').addClass('pricebutton hmvcolor');
     
 }
     
@@ -78,6 +77,8 @@ function getFromHtml(siteUrl,currentProduct){
     var trimmedprice = $('#siteHTML .priceAndButton .price').html().substring(1);
     $('#product-price-' + currentProduct + '-1').val(trimmedprice);
     $('#product-price-' + currentProduct + '-1').change();
+    $('.butclass-' + currentProduct + '-1').addClass('pricebutton xvcolor');
+    
 }
 
 $('.clear-sku').click(function(event) {

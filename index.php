@@ -25,8 +25,6 @@
                 <a href="http://www.hmvdigital.ie" target="_blank">hmv digital</a>
                 <a href="http://www.xtra-vision.co.uk" target="_blank">xtra-vision.co.uk</a>
                 <a href="http://www.xtra-vision.ie" target="_blank">xtra-vision.ie</a>
-                <a href="http://www.xvmarketplace.co.uk" target="_blank">xvm.co.uk</a>
-                <a href="http://www.xvmarketplace.ie" target="_blank">xvm.ie</a>
             </div>
         </div>
         <div class="newsletter-tool">
@@ -57,14 +55,6 @@
                         <input type="radio" id="xv-uk" name="store" value="xv-uk" data-id="Xtra-vision">
                         <label>Xtra-vision UK</label>
                     </div>
-                    <div class="mui-radio store">
-                        <input type="radio" id="xvm-ie" name="store" value="xvm-ie" data-id="Xtra-vision Marketplace">
-                        <label>XVM IE</label>
-                    </div>
-                    <div class="mui-radio store">
-                        <input type="radio" id="xvm-uk" name="store" value="xvm-uk" data-id="Xtra-vision Marketplace">
-                        <label>XVM UK</label>
-                    </div>
                 </form>
             </div>
             <div id="header" class="mui-panel">       
@@ -86,7 +76,8 @@
                 ?>
             </div>
 
-            <div id="products" class="forms hide">
+            <!--div id="products" class="forms hide"-->
+            <div id="products" class="forms">
                 
                 <div class="product-count">Number of Products: <span id="number-of-products"><?php echo $startcount?></span></div>
                 
@@ -161,10 +152,6 @@
                             <div class="mui-textfield">
                                 <input type="text" size="60" id="product-url-<?php echo $count?>" class="link" />
                                 <label>Product URL</label>
-                            </div>
-                            <div class="mui-checkbox">
-                                <input type="checkbox" name="pre-order" id="pre-order-<?php echo $count?>" />
-                                <label>Pre-order</label>
                             </div>
 
                             <?php while($second_count <= 2) {

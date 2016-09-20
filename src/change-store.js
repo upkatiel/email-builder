@@ -52,7 +52,7 @@ function storeChange(obj) {
         domainArray.push("hmv.ie");
         domainArray.push("movies-games-entertainment");
     } else if (store == "hmvdigital") {
-        productArray.push("hmvdigital");
+        productArray.push("hmv-digital");
         productArray.push("hmvdigital");
         productArray.push("£");
 
@@ -73,20 +73,6 @@ function storeChange(obj) {
         
         domainArray.push("xtra-vision.co.uk");
         domainArray.push("xv-movies-games-entertainment");
-    } else if (store == "xvm-ie") {
-        productArray.push("xvm-ie");
-        productArray.push("XVMarketplace");
-        productArray.push("€");
-        
-        domainArray.push("XVMarketplace.ie");
-        domainArray.push("movies-games");
-    } else if (store == "xvm-uk") {
-        productArray.push("xvm-uk");
-        productArray.push("XVMarketplace");
-        productArray.push("£");
-        
-        domainArray.push("XVMarketplace.co.uk");
-        domainArray.push("movies-games");
     }
     
     $('#bodyTable').find('a').each(function() {
@@ -105,8 +91,6 @@ function storeChange(obj) {
         tagArray1[k] = domainArray[k];
     }
     
-    footerSwap(productArray[1]);
-    
     //$('#header').removeClass('hide');
 }
 
@@ -116,29 +100,6 @@ function findStoreStuff(findme,replaceit) {
         var reg = new RegExp(findme, 'g');
         return w.replace(reg,replaceit);
     });
-}
-
-function footerSwap(store) {
-
-    var storeText;
-
-    switch (store) {
-        case "hmv":
-            storeText = "hmv name and related marks are registered. hmv Ireland Online Limited, registered in Ireland. No. 534703. Registered Office Greenhills Road, Tallaght, Dublin 24. &copy; 2016 hmv";
-            break;
-        case "hmv-digital":
-            storeText = "hmv name and related marks are registered. &copy; 2016 hmv";
-            break;
-        case "Xtra-vision":
-            storeText = "hmv Ireland Online Limited trading as Xtra-vision - hmv Ireland Online Limited, registered in Ireland. No. 534703. Registered Office Greenhills Road, Tallaght, Dublin 24. &copy; 2016 Xtra-vision";
-            break;
-        case "XVMarketplace":
-            storeText = "hmv Ireland Online Limited trading as XV Marketplace - hmv Ireland Online Limited, registered in Ireland. No. 534703. Registered Office Greenhills Road, Tallaght, Dublin 24. &copy; 2016 Xtra-vision";
-            break;
-    }
-
-    $("#store-footer").html(storeText);
-    //alert(storeText);
 }
 
 $(document).ready(function(){

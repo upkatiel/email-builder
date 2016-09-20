@@ -71,52 +71,43 @@
             div{
                 text-align: left;   
             }
-            
-            1{
-                color: #ffffff;
-                text-decoration: none;
-            }
-            
-            p{
-                color: #AAAAAA;
-            }
 
             h1{
-                color:#444444 !important;
+                color:#202020 !important;
                 display:block;
-                font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
-                font-size:24px;
+                font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+                font-size:28px;
                 font-style:normal;
-                font-weight:normal;
-                line-height:100%;
+                font-weight:bold;
+                line-height:120%;
                 letter-spacing:normal;
-                margin-top:15px;
+                margin-top:0px;
                 margin-right:0;
-                margin-bottom:15px;
+                margin-bottom:10px;
                 margin-left:0;
                 text-align:left;
             }
 
             h2{
-                color:#000000 !important;
+                color:#404040 !important;
                 display:block;
-                font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
-                font-size:18px;
+                font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+                font-size:24px;
                 font-style:normal;
-                font-weight:normal;
+                font-weight:bold;
                 line-height:100%;
                 letter-spacing:normal;
-                margin-top:15px;
-                margin-right:0;
-                margin-bottom:15px;
-                margin-left:0;
+                margin-top:0px;
+                margin-right:0px;
+                margin-bottom:10px;
+                margin-left:0px;
                 text-align:left;
             }
 
             h3{
                 color:#606060 !important;
                 display:block;
-                font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
+                font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
                 font-size:16px;
                 font-style:italic;
                 font-weight:normal;
@@ -132,7 +123,7 @@
             h4{
                 color:#808080 !important;
                 display:block;
-                font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
+                font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
                 font-size:14px;
                 font-style:italic;
                 font-weight:normal;
@@ -146,13 +137,13 @@
             }
 
             #templatePreheader{
-                background-color:#1A1A1A;
-                border-bottom:1px solid #444444;
+                background-color:#F4F4F4;
+                border-bottom:1px solid #CCCCCC;
             }
 
             .preheaderContent{
-                color:#cccccc;
-                font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
+                color:#808080;
+                font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
                 font-size:10px;
                 line-height:125%;
                 text-align:left;
@@ -163,18 +154,18 @@
             }
 
             .preheaderContent a:link,.preheaderContent a:visited,.preheaderContent a .yshortcuts{
-                color:#cccccc;
+                color:#606060;
                 font-weight:normal;
                 text-decoration:underline;
             }
 
             .templateHeader{
-                background-color:#2b2b2b;
+                background-color:#F4F4F4;
             }
 
             .headerContent{
                 color:#505050;
-                font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
+                font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
                 font-size:20px;
                 font-weight:bold;
                 line-height:100%;
@@ -187,38 +178,26 @@
             }
 
             .headerContent a:link,.headerContent a:visited,.headerContent a .yshortcuts{
-                color:#ffffff;
+                color:#EB4102;
                 font-weight:normal;
                 text-decoration:underline;
             }
-            
             #headerImage{
                 height:auto;
                 max-width:600px;
                 display:block;
             }
-            
-            .titletext{
-                background-color:#1a1a1a;
-                color:#fff; 
-                font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
-                font-size:18px;
-                padding-left:20px;
-                padding-top:10px;
-                padding-bottom:10px;
-                text-align:left;
-            }
 
             #templateBody{
-                background-color:#2b2b2b;
+                background-color:#F4F4F4;
                 border-top:1px solid #FFFFFF;
                 border-bottom:1px solid #CCCCCC;
             }
 
             .bodyContent{
                 color:#505050;
-                background-color:#2b2b2b;
-                font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
+                background-color:#ffffff;
+                font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
                 font-size:14px;
                 line-height:150%;
                 padding-top:20px;
@@ -243,13 +222,13 @@
             }
 
             .templateColumns{
-                background-color:#2b2b2b;
+                background-color:#FFFFFF;
                 /*@editable border-bottom:1px solid #CCCCCC;*/
             }
 
             .leftColumnContent{
                 color:#505050;
-                font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
+                font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
                 font-size:14px;
                 line-height:150%;
                 padding-top:0;
@@ -261,15 +240,31 @@
             }
 
             .leftColumnContent a:link,.leftColumnContent a:visited,.leftColumnContent a .yshortcuts{
-                color:#ffffff;
+                color:#EB4102;
                 font-weight:normal;
                 text-decoration:underline;
             }
 
-
+            .intro{
+                color:#505050;
+                font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+                font-size:12px;
+                line-height:150%;
+                padding:20px;
+                text-align:left;
+            }
+            
+            .synopsis{
+                margin-bottom: 10px;
+            }
+            
+            .buybutton{
+                max-width:126px !important;
+            }
+            
             .rightColumnContent{
                 color:#505050;
-                font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
+                font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
                 font-size:14px;
                 line-height:150%;
                 padding-left:0px;
@@ -279,76 +274,14 @@
             }
 
             .rightColumnContent a:link,.rightColumnContent a:visited,.rightColumnContent a .yshortcuts{
-                color:#ffffff;
+                color:#EB4102;
                 font-weight:normal;
                 text-decoration:underline;
             }
-            
             .leftColumnContent img,.rightColumnContent img{
                 display:inline;
                 height:auto;
-                max-width:260px;
-                margin-top: 20px;
-                margin-left: 20px;
-                margin-right: 20px;
-                border:0px solid #fff;
-            }
-            
-            .intro{
-                color:#cccccc;
-                font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
-                font-size:12px;
-                line-height:150%;
-                padding:20px;
-                text-align:left;
-            }
-
-            .synopsis{
-                color: #cccccc;
-                margin-bottom: 10px;
-            }
-
-            .pricebutton{
-                font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
-                font-size: 18px;
-                padding: 8px;
-                width:60px;
-                text-align: center;
-                border-radius: 3px;
-                -moz-border-radius: 3px;
-                -webkit-border-radius: 3px;
-                -webkit-border-radius: 3px;
-            }
-            
-            .pricebutton{
-                font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
-                font-size: 18px;
-                padding: 8px;
-                width:60px;
-                text-align: center;
-                border-radius: 3px;
-                -moz-border-radius: 3px;
-                -webkit-border-radius: 3px;
-                -webkit-border-radius: 3px;
-            }
-            
-            .xvcolor {
-                color: #ffffff;
-                background-color: #039800;
-            }
-
-            .hmvcolor {
-                color: #ffffff;
-                background-color: #ED0677;
-            }
-
-            .pricebutton:hover{
-                background-color: #1A1A1A;
-            }
-
-            .pricebutton a{
-                color: #ffffff;
-                text-decoration: none;
+                max-width:280px;
             }
             
             .columnImage{
@@ -364,7 +297,7 @@
                 height:auto;
                 max-width:150px;
             }
-            
+
             #templateFooter{
                 background-color:#F4F4F4;
                 border-top:1px solid #FFFFFF;
@@ -372,7 +305,7 @@
 
             .footerContent{
                 color:#808080;
-                font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
+                font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
                 font-size:10px;
                 line-height:150%;
                 padding-top:20px;
@@ -488,6 +421,10 @@
                     max-width:480px !important;
                     width:100% !important;
                 }
+                .buybutton{
+                    height:auto !important;
+                    max-width:252px !important;
+                }
                 .Image2up{
                     height:auto !important;
                     max-width:300px !important;
@@ -571,12 +508,12 @@
                                                                 <tr>
                                                                     <td class="headerContent">
                                                                         <a href="http://www.hmv.ie">
-                                                                            <img src="img/hmv-header.gif" style="max-width:600px;" class="headerImage" alt="hmv" /></a>
+                                                                            <img src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/hmv-header.gif" style="max-width:600px;" class="headerImage" alt="hmv" /></a>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="intro">
-                                                                        Hi *|FNAME|*<br>
+                                                                        Hi {{lead.First Name}},<br>
                                                                         <div id="intro-text"></div>
                                                                     </td>
                                                                 </tr>
@@ -590,9 +527,63 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="titletext">
+                                <td style="background-color:#1a1a1a; color:#fff; font-family:Helvetica, Arial, sans-serif; font-size:18px; padding-left:20px; padding-top:10px; padding-bottom:10px; text-align:left;">
                                     <div id="title-text"></div>
                                 </td>
+                            </tr>
+                            <tr class="show-box box-1"><td align="center" valign="top">
+                                <!-- BEGIN COLUMNS // -->
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateColumns">
+                                    <tr>
+                                        <td>
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td align="center" valign="top" class="templateColumnContainer">
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tr>
+                                                                <td align="center" class="leftColumnContent">
+                                                                    <a id="product-url-1" href="http://www.hmv.ie">
+                                                                        <img id="image-url-1" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/hmv-no-packshot.gif" width="240" class="columnImage" alt="product-title-1" />
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td align="center" valign="top" class="templateColumnContainer">
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tr>
+                                                                <td align="center" class="rightColumnContent" style="padding-left:20px;padding-right:20px;">
+                                                                    <h1><div id="product-title-1">Product Title</div></h1>
+                                                                    <div id="product-synopsis-1" class="synopsis">Product Synopsis</div>
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <h2><span id="product-price-1-1"></span><span style="font-size:14px" id="format-1-1"></span></h2>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <h2><span id="product-price-1-2"></span><span style="font-size:14px" id="format-1-2"></span></h2>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <h2><span id="product-price-1-3"></span><span style="font-size:14px" id="format-1-3"></span></h2>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <a id="product-url-1" href="http://www.hmv.ie">
+                                                                        <img id="pre-order-1" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/hmv-buy-now.gif" style="display:block;" class="buybutton" alt="Buy Now" />
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
                             </tr>
                             <tr>
                                 <td align="center" valign="top">
@@ -603,7 +594,7 @@
                                                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                     <tr>
                                                         <?php
-                                                            $count = 0;
+                                                            $count = 1;
                                                             $second_count = 0;
                                                             
                                                             while($count <= 20) {
@@ -625,33 +616,29 @@
                                                                }
                                                             ?>
                                                         <td align="center" valign="top" class="templateColumnContainer">
-                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="show-box box-<?php echo $count?>" <?php if ($count > 5) { echo 'style="display:none"'; }?>>
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="show-box box-<?php echo $count?>" <?php if ($count > 3) { echo 'style="display:none"'; }?>>
                                                                 <tr>
                                                                     <td align="center" class="<?php echo $class?>">
                                                                         <a id="product-url-<?php echo $count?>" href="http://www.hmv.ie">
-                                                                            <img id="image-url-<?php echo $count?>" src="img/hmv-no-packshot.gif" width="200" class="columnImage" alt="product-title-<?php echo $count?>" /></a>
+                                                                            <img id="image-url-<?php echo $count?>" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/hmv-no-packshot.gif" width="200" class="columnImage" alt="product-title-<?php echo $count?>" /></a>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td align="center" class="<?php echo $class?>" style="padding-left:20px;">
-                                                                        
-                                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff"><tr><td>
-                                                                                <h2><div id="product-title-<?php echo $count?>"></div></h2>
-                                                                                <div id="product-synopsis-<?php echo $count?>" class="synopsis"></div>
-                                                                                </td></tr>
-                                                                                <tr><td>
-                                                                                    <table>
-                                                                                        <?php while($second_count <= 2) {
-                                                                $second_count++; ?>
-                                                                                        <tr><td>
-                                                                                            <h2><a id="product-url-<?php echo $count?>" href="http://www.hmv.ie"><span class="butclass-<?php echo $count?>-<?php echo $second_count?>" id="product-price-<?php echo $count?>-<?php echo $second_count?>"></span><span style="font-size:14px" id="format-<?php echo $count?>-<?php echo $second_count?>"></span></a></h2>
-                                                                                            </td></tr>
-                                                                                        <?php
-                                                            }
-                                                                $second_count = 0; ?>
-                                                                                    </table>
-                                                                                        </td></tr></table>
-
+                                                                       <h1><div id="product-title-<?php echo $count?>"></div></h1>
+                                                                        <div id="product-synopsis-<?php echo $count?>" class="synopsis"></div>
+                                                                            <table>
+                                                                                <?php while($second_count <= 2) {
+                                                                                     $second_count++; ?>
+<tr><td>
+<h2><span id="product-price-<?php echo $count?>-<?php echo $second_count?>"></span><span style="font-size:14px" id="format-<?php echo $count?>-<?php echo $second_count?>"></span></h2>
+</td></tr>
+                                                                                <?php
+                                                                                 }
+                                                                                 $second_count = 0; ?>
+                                                                            </table>
+                                                                        <a id="product-url-<?php echo $count?>" href="http://www.hmv.ie">
+                                                                                <img id="pre-order-<?php echo $count?>" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/hmv-buy-now.gif" style="display:block;" class="buybutton" alt="Buy Now" /></a>
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -674,9 +661,8 @@
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
                                         <tr>
                                             <td valign="top" class="footerContent" style="padding-top:0px;"><br />
-                                                <div id="store-footer">Offers and prices are correct at time of broadcast. hmv reserve the right to remove these at any time. Only while stocks last. 10% Offer entitles you to 10% off all movies, music and games at hmv.ie. Cannot be used in conjunction with any other offer. Use once per customer, code valid until 01/11/2016. Promoter: hmv Ireland Online Ltd. Promoter's address: Greenhills Road, Tallaght, Dublin 24.<br><br>
-
-                                                    We'd really like to stay in touch and we never abuse your trust by selling your details to anyone else. BUT, if you'd like to stop receiving these emails then please click <a href="*|UNSUB|*">here</a> to update your subscription preferences (please allow up to 7 days for your preferences to be updated). hmv name and related marks are registered. hmv Ireland Online Limited, registered in Ireland. No. 534703. Registered Office Greenhills Road, Tallaght, Dublin 24. © 2016 hmv
+                                                <div id="store-footer">hmv name and related marks are registered. hmv Ireland Online Limited, registered in Ireland. No. 534703. Registered Office Greenhills Road, Tallaght, Dublin 24. &copy; 2015 hmv</div><br />
+                                                Offers and prices are correct at time of broadcast. hmv reserve the right to remove these at any time. Only while stocks last.
                                             </td>
                                         </tr>
                                     </table>

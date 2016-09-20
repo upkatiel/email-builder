@@ -7,10 +7,7 @@ function changeTitle(obj){
     array = get_index.split('-');
     i = array[2];
     
-    console.log(array);
-    
-    $('#bodyTable #image-url-' + i).attr('alt', val);
-    $('#bodyTable #pre-order-' + i).attr('alt', "Buy " + val + " Now");
+    //console.log(array);
 }
 
 function changeImg(obj){
@@ -27,17 +24,6 @@ function changeLink(obj){
     $('#bodyTable #' + replaceData).attr('href', val);
 }
 
-// Swap button images when pre-order check box clicked
-function updateButtons(obj) {
-    replaceData = $(obj).attr('id');
-    if($(obj).is(':checked')){
-        $('[id="'+replaceData+'"]').prop('src', function () { return this.src.replace('buy-now','pre-order'); });
-        $('[id="'+replaceData+'"]').prop('alt', function () { return this.alt.replace('Buy','Pre-order'); });
-    } else {
-        $('[id="'+replaceData+'"]').prop('src', function () { return this.src.replace('pre-order','buy-now'); });
-        $('[id="'+replaceData+'"]').prop('alt', function () { return this.alt.replace('Pre-order','Buy'); });
-    }
-}
 
 $(document).ready(function(){
     $("#mainHTML").load('mail-output.php');
@@ -55,11 +41,6 @@ $(document).ready(function(){
     $( ".image" )
         .on('change',function() {
         changeImg($(this));
-    });
-
-    $( "input[name=pre-order]" )
-        .on('change',function() {
-        updateButtons(this);
     });
 
 });
