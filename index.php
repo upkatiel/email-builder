@@ -11,10 +11,16 @@
         <script src="lib/mui.min.js"></script>
         <script src="lib/js.cookie.js"></script>
         <script src="lib/moment.min.js"></script>
-
+        <script src="src/custom-email.js"></script>
+        <script src="src/change-store.js"></script>
+        <script src="src/save-html.js"></script>
+        <script src="src/load.js"></script>
+        <script src="src/add-more.js"></script>
+        <script src="src/tabs.js"></script>
+        <script src="src/clear-forms.js"></script>
+        <script src="src/get-product.js"></script>
         <link href="http://www.xtra-vision.co.uk/Styles?v=dDdzXH6u5PNne_IcdeUf8MwRjNZubDIEsNvKypRCswM1" rel="stylesheet"/>
         <script src="http://www.xtra-vision.co.uk/Scripts/Common?v=JHuAT9fmKWn9vj3MEEgIiw8UP09dmem6wagg7X1_qtU1"></script>
-
         <link href="css/mui.min.css" rel="stylesheet" type="text/css" />
         <link href="css/style.css" rel="stylesheet" type="text/css">
     </head>
@@ -76,46 +82,25 @@
                     <?php
                         $count = 1;
                         while($count <= 12) {
-                            if ($count === 1) {
-                                $class = 'mui--is-active';
-                            } else {
-                                $class = 'none';
-                            }
-                            if ($count > $startcount) {
-                                $style = 'display:none';
-                            } else {
-                                $style = '';
-                            }
+                          $class = ($count === 1) ? 'mui--is-active' : 'none';
+                          $style = ($count > $startcount) ? 'display:none' : '';
                         ?>
                     <li class="show-box box-<?php echo $count?> <?php echo $class?>" style="<?php echo $style?>"><a data-mui-toggle="tab" data-mui-controls="pane-default-<?php echo $count?>">Item-<?php echo $count?></a></li>
-
-                    <?php
+                        <?php
                         $count++;
                         }
                         ?>
-
                 </ul>
 
                 <?php
                     $count = 1;
-
                     $second_count = 0;
-
                     while($count <= 20) {
-
-                        if ($count === 1) {
-                            $class = 'mui-tabs__pane mui--is-active';
-                        } else {
-                            $class = 'mui-tabs__pane';
-                        }
+                      $class = ($count === 1) ? 'mui-tabs__pane mui--is-active' : 'mui-tabs__pane';
                     ?>
-
                 <div class="<?php echo $class?>" id="pane-default-<?php echo $count?>">
-
                         <div class="content-<?php echo $count?> mui-panel" style="clear:both;">
-
                             <h2>Product <?php echo $count?></h2>
-
                             <div class="mui-panel">
                                 <div class="mui-textfield" style="width:30%; float:left; padding-right:20px;">
                                     <input type="text" size="60" id="product-sku-<?php echo $count?>" />
@@ -176,23 +161,21 @@
                                     </div>
                                 </div>
 
-                                <?php }
+                           <?php
+                            }
                             // Reset the counter to 1 or it will never loop again after the first 2.
-                            $second_count = 0; ?>
-
+                            $second_count = 0;
+                            ?>
                         </div>
-
                         <div style="clear:both;"></div>
-
                     </div>
-
-                <?php $count++; }?>
-
+                <?php
+                   $count++;
+                   }
+                ?>
                 <button class="mui-btn mui-btn--primary add-another">Add More</button>
                 <button class="mui-btn mui-btn--primary remove">Remove</button>
-
             </div>
-
         </div>
         <div class="output-wrapper">
             <div id="mainHTML"></div>
@@ -200,14 +183,6 @@
             <textarea id="quine"></textarea>
         </div>
 
-        <script src="src/custom-email.js"></script>
-        <script src="src/change-store.js"></script>
-        <script src="src/save-html.js"></script>
-        <script src="src/load.js"></script>
-        <script src="src/add-more.js"></script>
-        <script src="src/tabs.js"></script>
-        <script src="src/clear-forms.js"></script>
-        <script src="src/get-product.js"></script>
 
     </body>
 </html>

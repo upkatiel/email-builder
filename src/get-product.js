@@ -17,7 +17,18 @@ function getAproduct(store,sku){
     } else {
         siteUrl = 'http://www.xtra-vision.co.uk/movies-games-entertainment/pd/';
     }
-    
+    // var newProduct = $.ajax({
+    //     url: siteUrl + currentSku,
+    //     beforeSend: function( xhr ) {
+    //         xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
+    //     }
+    // })
+    //     .done(function( data ) {
+    //         if ( console && console.log ) {
+    //             console.log( "Sample of data:", data.slice( 0, 100 ) );
+    //         }
+    //     });
+
     var jqxhr = $.get(siteUrl + currentSku, function() {
     })
         .done(function(data) {
@@ -88,7 +99,6 @@ function getFromHtml(siteUrl,currentProduct){
     } 
     
 }
-
 $('.clear-sku').click(function(event) {
     $( "#siteHTML" ).remove();
     $( ".output-wrapper" ).append("<div id='siteHTML' class='hide'></div>");

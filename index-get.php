@@ -14,7 +14,7 @@
 
         <link href="http://www.xtra-vision.co.uk/Styles?v=dDdzXH6u5PNne_IcdeUf8MwRjNZubDIEsNvKypRCswM1" rel="stylesheet"/>
         <script src="http://www.xtra-vision.co.uk/Scripts/Common?v=JHuAT9fmKWn9vj3MEEgIiw8UP09dmem6wagg7X1_qtU1"></script>
-        
+
         <link href="css/mui.min.css" rel="stylesheet" type="text/css" />
         <link href="css/style.css" rel="stylesheet" type="text/css">
 
@@ -64,6 +64,6 @@
         </div>
         
         <script src="src/get-product.js"></script>
-        
+
     </body>
 </html>
