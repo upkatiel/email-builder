@@ -12,4 +12,15 @@ $('.load-it').click(function() {
         
     });
     
+    var store = $('input[name=store]:checked', '#formy').val();
+    
+    $(['span[id^="product-price"]']).each(function(k , v) {
+        
+        if (store == "hmvdigital") {
+            $(this).addClass('pricebutton hmvcolor');
+        } else if (store == "Xtra-vision"){
+            $(this).addClass('pricebutton xvcolor');
+        } 
+    });
+   
 });

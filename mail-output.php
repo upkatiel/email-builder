@@ -20,6 +20,7 @@
             body,table,td,p,a,li,blockquote{
                 -webkit-text-size-adjust:100%;
                 -ms-text-size-adjust:100%;
+                -webkit-font-smoothing: antialiased !important;
             }
             table,td{
                 mso-table-lspace:0pt;
@@ -72,7 +73,7 @@
                 text-align: left;   
             }
             
-            1{
+            a{
                 color: #ffffff;
                 text-decoration: none;
             }
@@ -104,12 +105,12 @@
                 font-size:18px;
                 font-style:normal;
                 font-weight:normal;
-                line-height:100%;
+                line-height:120%;
                 letter-spacing:normal;
                 margin-top:15px;
                 margin-right:0;
                 margin-bottom:15px;
-                margin-left:0;
+                margin-left:10px;
                 text-align:left;
             }
 
@@ -187,7 +188,7 @@
             }
 
             .headerContent a:link,.headerContent a:visited,.headerContent a .yshortcuts{
-                color:#ffffff;
+                color:#EB4102;
                 font-weight:normal;
                 text-decoration:underline;
             }
@@ -252,45 +253,30 @@
                 font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
                 font-size:14px;
                 line-height:150%;
-                padding-top:0;
-                padding-right:0px;
+                padding-top:0px;
+                padding-left:20px;
+                padding-right:20px;
                 padding-bottom:0px;
-                padding-left:0px;
-                /*text-align:left;*/
-                padding: 10px;
+                text-align:left;
             }
-
-            .leftColumnContent a:link,.leftColumnContent a:visited,.leftColumnContent a .yshortcuts{
-                color:#ffffff;
-                font-weight:normal;
-                text-decoration:underline;
-            }
-
 
             .rightColumnContent{
                 color:#505050;
                 font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
                 font-size:14px;
                 line-height:150%;
-                padding-left:0px;
+                padding-top:0px;
+                padding-left:20px;
                 padding-right:20px;
-                /*text-align:left;*/
-                padding: 10px;
+                padding-bottom:0px;
+                text-align:left;
             }
 
-            .rightColumnContent a:link,.rightColumnContent a:visited,.rightColumnContent a .yshortcuts{
-                color:#ffffff;
-                font-weight:normal;
-                text-decoration:underline;
-            }
-            
             .leftColumnContent img,.rightColumnContent img{
                 display:inline;
                 height:auto;
                 max-width:260px;
                 margin-top: 20px;
-                margin-left: 20px;
-                margin-right: 20px;
                 border:0px solid #fff;
             }
             
@@ -304,27 +290,26 @@
             }
 
             .synopsis{
-                color: #cccccc;
+                font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
+                color: #aaaaaa;
+                font-size:14px;
+                margin-left: 10px;
+                margin-right: 10px;
                 margin-bottom: 10px;
+                line-height:120%;
+            }
+            
+            .type {
+                color: #cccccc;
             }
 
             .pricebutton{
                 font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
                 font-size: 18px;
-                padding: 8px;
-                width:60px;
-                text-align: center;
-                border-radius: 3px;
-                -moz-border-radius: 3px;
-                -webkit-border-radius: 3px;
-                -webkit-border-radius: 3px;
-            }
-            
-            .pricebutton{
-                font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
-                font-size: 18px;
-                padding: 8px;
-                width:60px;
+                font-weight: normal;
+                padding: 6px 20px 6px 20px;
+                margin-right: 10px;
+                width:80px;
                 text-align: center;
                 border-radius: 3px;
                 -moz-border-radius: 3px;
@@ -347,6 +332,7 @@
             }
 
             .pricebutton a{
+                padding: 6px 20px 6px 20px;
                 color: #ffffff;
                 text-decoration: none;
             }
@@ -606,45 +592,41 @@
                                                             $count = 0;
                                                             $second_count = 0;
                                                             
-                                                            while($count <= 20) {
-                                                            $count++;
-                                                                if ($count % 2 == 0) {
+                                                            while($count <= 13) {
+                                                                $count++;
+                                                                if ($count % 2 !== 0) {
                                                                     $class = 'leftColumnContent';
                                                                     $sep = '';
                                                                 } else {
                                                                     $class = 'rightColumnContent';
-                                                                    if ($count > 5) {
-                                                                        $style = 'display:none';
-                                                                    } else {
-                                                                        $style = '';
-                                                                    }
                                                                     $sep = '';
                                                                 }
-                                                                if ($count % 2 == 0) {
+                                                                
+                                                                if ($count % 2 !== 0) {
                                                                    echo '</tr><tr>';
-                                                               }
+                                                                }
                                                             ?>
                                                         <td align="center" valign="top" class="templateColumnContainer">
-                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="show-box box-<?php echo $count?>" <?php if ($count > 5) { echo 'style="display:none"'; }?>>
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="show-box box-<?php echo $count?>" <?php if ($count > 4) { echo 'style="display:none"'; }?>>
                                                                 <tr>
                                                                     <td align="center" class="<?php echo $class?>">
                                                                         <a id="product-url-<?php echo $count?>" href="http://www.hmv.ie">
-                                                                            <img id="image-url-<?php echo $count?>" src="img/hmv-no-packshot.gif" width="200" class="columnImage" alt="product-title-<?php echo $count?>" /></a>
+                                                                            <img id="image-url-<?php echo $count?>" src="img/hmv-no-packshot.gif" class="columnImage" alt="product-title-<?php echo $count?>" /></a>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td align="center" class="<?php echo $class?>" style="padding-left:20px;">
+                                                                    <td align="center" class="<?php echo $class?>">
                                                                         
                                                                             <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff"><tr><td>
                                                                                 <h2><div id="product-title-<?php echo $count?>"></div></h2>
                                                                                 <div id="product-synopsis-<?php echo $count?>" class="synopsis"></div>
                                                                                 </td></tr>
                                                                                 <tr><td>
-                                                                                    <table>
-                                                                                        <?php while($second_count <= 2) {
+                                                                                    <table width="100%">
+                                                                                        <?php while($second_count <= 0) {
                                                                 $second_count++; ?>
                                                                                         <tr><td>
-                                                                                            <h2><a id="product-url-<?php echo $count?>" href="http://www.hmv.ie"><span class="butclass-<?php echo $count?>-<?php echo $second_count?>" id="product-price-<?php echo $count?>-<?php echo $second_count?>"></span><span style="font-size:14px" id="format-<?php echo $count?>-<?php echo $second_count?>"></span></a></h2>
+                                                                                            <h2><a id="product-url-<?php echo $count?>" href="http://www.hmv.ie"><span class="butclass-<?php echo $count?>-<?php echo $second_count?>" id="product-price-<?php echo $count?>-<?php echo $second_count?>"></span><span style="font-size:14px;color:#cccccc;" id="format-<?php echo $count?>-<?php echo $second_count?>"></span></a></h2>
                                                                                             </td></tr>
                                                                                         <?php
                                                             }
@@ -666,17 +648,17 @@
                                 </td>
                             </tr>
                             <tr class='last-1'>
-                                <td height="20" bgcolor="#FFFFFF"></td>
+                                <td height="20" bgcolor="1A1A1A"></td>
                             </tr>
                             <tr>
                                 <td align="center" valign="top">
                                     <!-- BEGIN FOOTER // -->
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
                                         <tr>
-                                            <td valign="top" class="footerContent" style="padding-top:0px;"><br />
-                                                <div id="store-footer">Offers and prices are correct at time of broadcast. hmv reserve the right to remove these at any time. Only while stocks last. 10% Offer entitles you to 10% off all movies, music and games at hmv.ie. Cannot be used in conjunction with any other offer. Use once per customer, code valid until 01/11/2016. Promoter: hmv Ireland Online Ltd. Promoter's address: Greenhills Road, Tallaght, Dublin 24.<br><br>
+                                            <td valign="top" class="footerContent" >
+                                                <div id="store-footer">Offers and prices are correct at time of broadcast. hmv reserve the right to remove these at any time.  Promoter: hmv Ireland Online Ltd. Promoter's address: Greenhills Road, Tallaght, Dublin 24.<br><br>
 
-                                                    We'd really like to stay in touch and we never abuse your trust by selling your details to anyone else. BUT, if you'd like to stop receiving these emails then please click <a href="*|UNSUB|*">here</a> to update your subscription preferences (please allow up to 7 days for your preferences to be updated). hmv name and related marks are registered. hmv Ireland Online Limited, registered in Ireland. No. 534703. Registered Office Greenhills Road, Tallaght, Dublin 24. © 2016 hmv
+                                                    We'd really like to stay in touch and we never abuse your trust by selling your details to anyone else. BUT, if you'd like to stop receiving these emails then please click <a href="*|UNSUB|*">here</a> to update your subscription preferences (please allow up to 7 days for your preferences to be updated). hmv name and related marks are registered. hmv Ireland Online Limited, registered in Ireland. No. 534703. Registered Office Greenhills Road, Tallaght, Dublin 24. &copy; 2016 hmv
                                             </td>
                                         </tr>
                                     </table>

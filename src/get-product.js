@@ -10,10 +10,12 @@ function getAproduct(store,sku){
     var currentSku = $('#product-sku-' + currentProduct).val();
     var siteUrl;
     
-    if (store =="hmvdigital") {
-        siteUrl = 'https://www.hmvdigital.ie/releases/';
-    } else {
+    if (store == "hmvdigital") {
+        siteUrl = 'https://www.hmvdigital.com/releases/';
+    } else if (store == "hmv"){
         siteUrl = 'http://www.hmv.ie/movies-games-entertainment/pd/';
+    } else {
+        siteUrl = 'http://www.xtra-vision.co.uk/movies-games-entertainment/pd/';
     }
     
     var jqxhr = $.get(siteUrl + currentSku, function() {
@@ -52,7 +54,7 @@ function getFromDigitalHtml(siteUrl,currentProduct){
     $('#product-url-' + currentProduct).val(siteUrl + $('#product-sku-' + currentProduct).val());
     $('#product-url-' + currentProduct).change();
     
-    var trimmedprice = $('#siteHTML .price .price').html().substring(1);
+    var trimmedprice = $('#siteHTML #content article header div.packages div p.price strong').html().substring(1);
     $('#product-price-' + currentProduct + '-1').val(trimmedprice);
     $('#product-price-' + currentProduct + '-1').change();
     $('.butclass-' + currentProduct + '-1').addClass('pricebutton hmvcolor');
@@ -77,7 +79,13 @@ function getFromHtml(siteUrl,currentProduct){
     var trimmedprice = $('#siteHTML .priceAndButton .price').html().substring(1);
     $('#product-price-' + currentProduct + '-1').val(trimmedprice);
     $('#product-price-' + currentProduct + '-1').change();
-    $('.butclass-' + currentProduct + '-1').addClass('pricebutton xvcolor');
+    
+    var store = $('input[name=store]:checked', '#formy').val();
+    if (store == "hmv") {
+        $('.butclass-' + currentProduct + '-1').addClass('pricebutton hmvcolor');
+    } else if (store == "Xtra-vision"){
+        $('.butclass-' + currentProduct + '-1').addClass('pricebutton xvcolor');
+    } 
     
 }
 

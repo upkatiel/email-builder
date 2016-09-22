@@ -72,7 +72,7 @@
                 </div>
                 
                 <?php 
-                    $startcount = 3;
+                    $startcount = 4;
                 ?>
             </div>
 
@@ -84,11 +84,11 @@
                 <ul class="mui-tabs__bar" style="width:100%; white-space: normal;">
                       
                     <?php 
-                        $count = 0;
+                        $count = 1;
 
-                        while($count <= 20) {
-                            $count++;
-                            if ($count == 1) {
+                        while($count <= 12) {
+                       
+                            if ($count === 1) {
                                 $class = 'mui--is-active';
                             } else {
                                 $class = 'none';
@@ -102,18 +102,18 @@
                         
                     <li class="show-box box-<?php echo $count?> <?php echo $class?>" style="<?php echo $style?>"><a data-mui-toggle="tab" data-mui-controls="pane-default-<?php echo $count?>">Item-<?php echo $count?></a></li>
 
-                    <?php  }?>
+                    <?php  $count++; }?>
                     
                 </ul>
                 
                 <?php 
-                    $count = 0;
+                    $count = 1;
                 
                     $second_count = 0;
 
                     while($count <= 20) {
-                        $count++;
-                        if ($count == 1) {
+                        
+                        if ($count === 1) {
                             $class = 'mui-tabs__pane mui--is-active';
                         } else {
                             $class = 'mui-tabs__pane';
@@ -154,7 +154,7 @@
                                 <label>Product URL</label>
                             </div>
 
-                            <?php while($second_count <= 2) {
+                            <?php while($second_count <= 0) {
                             // loop though until count is equal or less than 2 - ADDS 3 PRICE/FORMAT blocks
                             // Plus one to the counter each loop
                             $second_count++;
@@ -196,7 +196,7 @@
 
                     </div>
 
-                <?php  }?>
+                <?php $count++; }?>
                 
                 <button class="mui-btn mui-btn--primary add-another">Add More</button>
                 <button class="mui-btn mui-btn--primary remove">Remove</button>
