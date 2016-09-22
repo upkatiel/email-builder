@@ -11,10 +11,10 @@
         <script src="lib/mui.min.js"></script>
         <script src="lib/js.cookie.js"></script>
         <script src="lib/moment.min.js"></script>
-        
+
         <link href="http://www.xtra-vision.co.uk/Styles?v=dDdzXH6u5PNne_IcdeUf8MwRjNZubDIEsNvKypRCswM1" rel="stylesheet"/>
         <script src="http://www.xtra-vision.co.uk/Scripts/Common?v=JHuAT9fmKWn9vj3MEEgIiw8UP09dmem6wagg7X1_qtU1"></script>
-        
+
         <link href="css/mui.min.css" rel="stylesheet" type="text/css" />
         <link href="css/style.css" rel="stylesheet" type="text/css">
     </head>
@@ -28,36 +28,34 @@
             </div>
         </div>
         <div class="newsletter-tool">
-            
+
             <h1 id="title">Newsletter tool</h1>
             <div id="buttons">
                 <button class="mui-btn mui-btn--primary get-html">View HTML</button>
                 <button class="mui-btn mui-btn--primary save-html">Save HTML</button>
                 <button class="mui-btn mui-btn--primary load-it">Load Cookie</button>
             </div>
-            <!--button class="mui-btn mui-btn--primary clear-it">Clear Cookie</button-->
-
             <div class="mui-panel" style="margin-top:10px;">
-                <form id="formy" class="mui-form--inline">
-                    <div class="mui-radio store">
-                        <input type="radio" id="hmv-ie" name="store" value="hmv-ie" data-id="hmv">
-                        <label>hmv</label>
-                    </div>
-                    <div class="mui-radio store">
-                        <input type="radio" id="hmvdigital" name="store" value="hmvdigital" data-id="hmv Digital">
-                        <label>hmv Digital</label>
-                    </div>
-                    <div class="mui-radio store">
-                        <input type="radio" id="xv-ie" name="store" value="xv-ie" data-id="Xtra-vision">
-                        <label>Xtra-vision IE</label>
-                    </div>
-                    <div class="mui-radio store">
-                        <input type="radio" id="xv-uk" name="store" value="xv-uk" data-id="Xtra-vision">
-                        <label>Xtra-vision UK</label>
-                    </div>
-                </form>
+              <form id="formy" class="mui-form--inline">
+                <div class="mui-radio store">
+                  <input type="radio" id="hmv-ie" name="store" value="hmv-ie" data-id="hmv">
+                  <label for="hmv-ie">hmv</label>
+                </div>
+                <div class="mui-radio store">
+                  <input type="radio" id="hmvdigital" name="store" value="hmvdigital" data-id="hmv Digital">
+                  <label for="hmvdigital">hmv Digital</label>
+                </div>
+                <div class="mui-radio store">
+                  <input type="radio" id="xv-ie" name="store" value="xv-ie" data-id="Xtra-vision">
+                  <label for="xv-ie">Xtra-vision IE</label>
+                </div>
+                <div class="mui-radio store">
+                  <input type="radio" id="xv-uk" name="store" value="xv-uk" data-id="Xtra-vision">
+                  <label for="xv-uk">Xtra-vision UK</label>
+                </div>
+              </form>
             </div>
-            <div id="header" class="mui-panel">       
+            <div id="header" class="mui-panel">
                 <div class="mui-textfield">
                     <input type="text" size="60" id="pre-header" />
                     <label>Pre-header</label>
@@ -70,24 +68,14 @@
                     <input type="text" size="60" id="title-text" />
                     <label>Title Text</label>
                 </div>
-                
-                <?php 
-                    $startcount = 4;
-                ?>
+              <?php $startcount = 4;?>
             </div>
-
-            <!--div id="products" class="forms hide"-->
             <div id="products" class="forms">
-                
                 <div class="product-count">Number of Products: <span id="number-of-products"><?php echo $startcount?></span></div>
-                
-                <ul class="mui-tabs__bar" style="width:100%; white-space: normal;">
-                      
-                    <?php 
+                <ul class="mui-tabs__bar">
+                    <?php
                         $count = 1;
-
                         while($count <= 12) {
-                       
                             if ($count === 1) {
                                 $class = 'mui--is-active';
                             } else {
@@ -99,34 +87,36 @@
                                 $style = '';
                             }
                         ?>
-                        
                     <li class="show-box box-<?php echo $count?> <?php echo $class?>" style="<?php echo $style?>"><a data-mui-toggle="tab" data-mui-controls="pane-default-<?php echo $count?>">Item-<?php echo $count?></a></li>
 
-                    <?php  $count++; }?>
-                    
+                    <?php
+                        $count++;
+                        }
+                        ?>
+
                 </ul>
-                
-                <?php 
+
+                <?php
                     $count = 1;
-                
+
                     $second_count = 0;
 
                     while($count <= 20) {
-                        
+
                         if ($count === 1) {
                             $class = 'mui-tabs__pane mui--is-active';
                         } else {
                             $class = 'mui-tabs__pane';
                         }
                     ?>
-                
+
                 <div class="<?php echo $class?>" id="pane-default-<?php echo $count?>">
-                    
+
                         <div class="content-<?php echo $count?> mui-panel" style="clear:both;">
-                            
+
                             <h2>Product <?php echo $count?></h2>
-                            
-                            <div class="mui-panel">       
+
+                            <div class="mui-panel">
                                 <div class="mui-textfield" style="width:30%; float:left; padding-right:20px;">
                                     <input type="text" size="60" id="product-sku-<?php echo $count?>" />
                                     <label>Product SKU</label>
@@ -136,7 +126,7 @@
                                     <button class="mui-btn mui-btn--primary clear-it" data-id="content-<?php echo $count?>" >Clear All</button>
                                 </div>
                             </div>
-                            
+
                             <div class="mui-textfield">
                                 <input type="text" id="product-title-<?php echo $count?>" class="title" size="60" />
                                 <label>Product Title</label>
@@ -145,7 +135,7 @@
                                 <input type="text" size="60" id="product-synopsis-<?php echo $count?>" class="product-synopsis" />
                                 <label>Product Synopsis</label>
                             </div>
-                            <div class="mui-textfield">    
+                            <div class="mui-textfield">
                                 <input type="text" size="60" id="image-url-<?php echo $count?>" class="image" />
                                 <label>Image URL</label>
                             </div>
@@ -197,10 +187,10 @@
                     </div>
 
                 <?php $count++; }?>
-                
+
                 <button class="mui-btn mui-btn--primary add-another">Add More</button>
                 <button class="mui-btn mui-btn--primary remove">Remove</button>
-                
+
             </div>
 
         </div>
@@ -209,7 +199,7 @@
             <div id="siteHTML" class="hide"></div>
             <textarea id="quine"></textarea>
         </div>
-        
+
         <script src="src/custom-email.js"></script>
         <script src="src/change-store.js"></script>
         <script src="src/save-html.js"></script>
@@ -218,6 +208,6 @@
         <script src="src/tabs.js"></script>
         <script src="src/clear-forms.js"></script>
         <script src="src/get-product.js"></script>
-        
+
     </body>
 </html>

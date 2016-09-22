@@ -2,15 +2,12 @@
     padding-left: 10px;
     padding-right: 10px;
 }
-
-.content {
+.content,
+.hide,
+#cke_quine,
+#cke_1_top {
     display:none;
 }
-
-.hide {
-    display:none;
-}
-
 .clear-it{
     float: right;
 }
@@ -19,7 +16,13 @@
     clear: both;
     padding-top: 50px;
 }
-
+.mui-panel {
+    margin-top: 10px;
+}
+.mui-tabs__bar {
+    width:100%;
+    white-space: normal;
+}
 .product-count{
     padding-top:20px;
     display:inline-block;
@@ -53,14 +56,8 @@
     border: 1px solid #ddd;
 }
 
-a{
-    text-decoration: none;
-}
-
-a:hover{
-    text-decoration: none;
-}
-
+a,
+a:hover,
 a:focus{
     text-decoration: none;
 }
@@ -95,11 +92,7 @@ a:focus{
 }
 
 .output-wrapper {
-    float: left;width: 47%;padding: 0px;
-}
-
-#cke_quine , #cke_1_top {
-    display: none;
+    float: left;width: 47%;padding: 0;
 }
 
 .cke_contents {
@@ -117,15 +110,14 @@ a:focus{
     border-bottom: 1px solid rgba(0,200,0,1);
 }
 
-
 @media only screen and (max-width: 480px){
     .site-links {
         padding-top: 5px;
     }
     .mui-btn+.mui-btn {
-        margin-left: 0px;
+        margin-left: 0;
     }
     .mui-checkbox>label, .mui-radio>label{
-        padding-left: 0px;
+        padding-left: 0;
     }
 }
